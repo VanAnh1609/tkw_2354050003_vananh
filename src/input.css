@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme static {
+  /* ===== Brand colors ===== */
+  --color-brand-50: #fcf5f7;
+  --color-brand-100: #f9e7ec;
+  --color-brand-400: #df8aa2;
+  --color-brand-500: #cf6483;
+  --color-brand-700: #9c3955;
+
+  /* ===== Accent colors ===== */
+  --color-accent-300: #f6e6a8;
+  --color-accent-400: #eecb5b;
+  --color-accent-500: #eab735;
+
+  /* ===== Màu chữ ===== */
+  --color-ink: #121826;
+  --color-muted: #667085;
+  --color-line: #e5e7eb;
+  --color-surface: #ffffff;
+
+  /* ===== Font ===== */
+  --font-display: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+.section {
+  @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors;
+}
