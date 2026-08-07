@@ -121,25 +121,56 @@
     <!-- NỘI DUNG CHÍNH -->
     <main id="main-content">
       <!-- ==================================================
-           2. HERO
-      ================================================== -->
-      <section id="hero" aria-labelledby="hero-title">
-        <p>Chăm sóc vẻ đẹp mỗi ngày</p>
+     2. HERO
+================================================== -->
+      <section
+        id="hero"
+        class="section grid items-center gap-14 lg:grid-cols-2 lg:gap-16"
+        aria-labelledby="hero-title"
+      >
+        <!-- BÊN TRÁI -->
+        <div>
+          <p class="mb-4 font-body text-base font-medium text-brand-500">
+            Chăm sóc vẻ đẹp mỗi ngày
+          </p>
 
-        <h1 id="hero-title">Khám phá vẻ đẹp tự nhiên của bạn</h1>
+          <h1
+            id="hero-title"
+            class="font-display text-4xl font-bold leading-tight text-ink sm:text-5xl lg:text-6xl"
+          >
+            Khám phá vẻ đẹp
+            <br />
+            tự nhiên của bạn
+          </h1>
 
-        <p>
-          Khám phá các sản phẩm chăm sóc da, trang điểm và làm đẹp chính hãng từ
-          những thương hiệu được yêu thích.
-        </p>
+          <p class="mt-6 max-w-xl font-body text-base leading-7 text-muted">
+            Khám phá các sản phẩm chăm sóc da, trang điểm và làm đẹp chính hãng
+            từ những thương hiệu được yêu thích.
+          </p>
 
-        <a href="#features">Khám phá sản phẩm</a>
-        <a href="#brands">Xem thương hiệu</a>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#features"
+              class="btn bg-brand-500 font-body text-white hover:bg-brand-700"
+            >
+              Khám phá sản phẩm
+            </a>
 
-        <figure>
+            <a
+              href="#brands"
+              class="btn border border-brand-400 bg-white font-body text-brand-700 hover:bg-brand-50"
+            >
+              Xem thương hiệu
+            </a>
+          </div>
+        </div>
+
+        <!-- BÊN PHẢI -->
+        <figure class="flex items-center justify-center">
           <img
             src="./assets/img/hero-cosmetics.png"
             alt="Bộ sản phẩm mỹ phẩm chăm sóc da"
+            class="w-full max-w-lg object-contain"
           />
         </figure>
       </section>
