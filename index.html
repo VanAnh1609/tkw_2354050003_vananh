@@ -29,22 +29,92 @@
     <!-- ==================================================
          1. NAVBAR
     ================================================== -->
-    <header>
-      <nav aria-label="Điều hướng chính">
-        <a href="index.html" aria-label="Beauty Glow - Trang chủ">
-          Beauty Glow
-        </a>
+    <header class="bg-surface">
+      <nav
+        class="mx-auto flex h-[85px] w-full max-w-[1280px] items-center justify-between px-5 lg:px-0"
+        aria-label="Điều hướng chính"
+      >
+        <!-- ================= BÊN TRÁI ================= -->
+        <div class="flex items-center">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="flex items-center gap-2"
+            aria-label="Beauty Glow - Trang chủ"
+          >
+            <!-- Tạm dùng icon khi chưa thêm ảnh logo -->
+            <span class="text-2xl text-brand-500" aria-hidden="true">✦</span>
 
-        <ul>
-          <li><a href="#hero">Trang chủ</a></li>
-          <li><a href="#features">Sản phẩm</a></li>
-          <li><a href="#brands">Thương hiệu</a></li>
-          <li><a href="#testimonials">Đánh giá</a></li>
-          <li><a href="#faq">Câu hỏi thường gặp</a></li>
-        </ul>
+            <span class="font-display text-2xl font-bold text-ink">
+              Beauty Glow
+            </span>
+          </a>
 
-        <a href="#login">Đăng nhập</a>
-        <a href="#cta">Mua ngay</a>
+          <!-- Menu -->
+          <ul class="ml-14 hidden items-center gap-10 lg:flex">
+            <li>
+              <a
+                href="#hero"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-500"
+              >
+                Trang chủ
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#features"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-500"
+              >
+                Sản phẩm
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#brands"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-500"
+              >
+                Thương hiệu
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#testimonials"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-500"
+              >
+                Đánh giá
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#faq"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-500"
+              >
+                Liên hệ
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ================= BÊN PHẢI ================= -->
+        <div class="flex items-center gap-6">
+          <a
+            href="#login"
+            class="hidden font-body text-base font-medium text-ink transition-colors hover:text-brand-500 lg:block"
+          >
+            Đăng nhập
+          </a>
+
+          <a
+            href="#cta"
+            class="btn bg-brand-500 font-body text-white hover:bg-brand-700"
+          >
+            Mua ngay
+          </a>
+        </div>
       </nav>
     </header>
 
@@ -56,13 +126,11 @@
       <section id="hero" aria-labelledby="hero-title">
         <p>Chăm sóc vẻ đẹp mỗi ngày</p>
 
-        <h1 id="hero-title">
-          Khám phá vẻ đẹp tự nhiên của bạn
-        </h1>
+        <h1 id="hero-title">Khám phá vẻ đẹp tự nhiên của bạn</h1>
 
         <p>
-          Khám phá các sản phẩm chăm sóc da, trang điểm và làm đẹp chính hãng
-          từ những thương hiệu được yêu thích.
+          Khám phá các sản phẩm chăm sóc da, trang điểm và làm đẹp chính hãng từ
+          những thương hiệu được yêu thích.
         </p>
 
         <a href="#features">Khám phá sản phẩm</a>
@@ -80,9 +148,7 @@
            3. LOGO THƯƠNG HIỆU
       ================================================== -->
       <section id="brands" aria-labelledby="brands-title">
-        <h2 id="brands-title">
-          Thương hiệu đồng hành cùng Beauty Glow
-        </h2>
+        <h2 id="brands-title">Thương hiệu đồng hành cùng Beauty Glow</h2>
 
         <p>
           Beauty Glow giới thiệu các sản phẩm đến từ nhiều thương hiệu mỹ phẩm
@@ -103,13 +169,11 @@
            4. TÍNH NĂNG
       ================================================== -->
       <section id="features" aria-labelledby="features-title">
-        <h2 id="features-title">
-          Trải nghiệm mua sắm tại Beauty Glow
-        </h2>
+        <h2 id="features-title">Trải nghiệm mua sắm tại Beauty Glow</h2>
 
         <p>
-          Beauty Glow giúp khách hàng dễ dàng tìm kiếm sản phẩm phù hợp,
-          xem thông tin rõ ràng và lựa chọn mỹ phẩm theo nhu cầu chăm sóc cá nhân.
+          Beauty Glow giúp khách hàng dễ dàng tìm kiếm sản phẩm phù hợp, xem
+          thông tin rõ ràng và lựa chọn mỹ phẩm theo nhu cầu chăm sóc cá nhân.
         </p>
 
         <ul>
@@ -117,8 +181,8 @@
             <article>
               <h3>Sản phẩm có nguồn gốc rõ ràng</h3>
               <p>
-                Mỗi sản phẩm hiển thị thương hiệu, thông tin sử dụng và nhóm
-                nhu cầu chăm sóc phù hợp để khách hàng dễ lựa chọn.
+                Mỗi sản phẩm hiển thị thương hiệu, thông tin sử dụng và nhóm nhu
+                cầu chăm sóc phù hợp để khách hàng dễ lựa chọn.
               </p>
             </article>
           </li>
@@ -127,8 +191,8 @@
             <article>
               <h3>Đa dạng nhóm sản phẩm</h3>
               <p>
-                Có các sản phẩm chăm sóc da, trang điểm, nước hoa và chăm sóc
-                cơ thể từ nhiều thương hiệu khác nhau.
+                Có các sản phẩm chăm sóc da, trang điểm, nước hoa và chăm sóc cơ
+                thể từ nhiều thương hiệu khác nhau.
               </p>
             </article>
           </li>
@@ -159,12 +223,11 @@
            5. SỐ LIỆU
       ================================================== -->
       <section id="statistics" aria-labelledby="statistics-title">
-        <h2 id="statistics-title">
-          Beauty Glow qua những con số
-        </h2>
+        <h2 id="statistics-title">Beauty Glow qua những con số</h2>
 
         <p>
-          Một số con số minh họa quy mô sản phẩm và mức độ quan tâm của khách hàng.
+          Một số con số minh họa quy mô sản phẩm và mức độ quan tâm của khách
+          hàng.
         </p>
 
         <dl>
@@ -194,9 +257,7 @@
            6. CẢM NHẬN
       ================================================== -->
       <section id="testimonials" aria-labelledby="testimonials-title">
-        <h2 id="testimonials-title">
-          Khách hàng nói gì về Beauty Glow
-        </h2>
+        <h2 id="testimonials-title">Khách hàng nói gì về Beauty Glow</h2>
 
         <ul>
           <li>
@@ -247,12 +308,11 @@
            7. BẢNG GIÁ
       ================================================== -->
       <section id="pricing" aria-labelledby="pricing-title">
-        <h2 id="pricing-title">
-          Bảng giá sản phẩm nổi bật
-        </h2>
+        <h2 id="pricing-title">Bảng giá sản phẩm nổi bật</h2>
 
         <p>
-          Tham khảo ba sản phẩm thuộc các nhóm chăm sóc da phổ biến tại Beauty Glow.
+          Tham khảo ba sản phẩm thuộc các nhóm chăm sóc da phổ biến tại Beauty
+          Glow.
         </p>
 
         <ul>
@@ -269,9 +329,7 @@
                 <li>Dùng trong chu trình chăm sóc da hằng ngày</li>
               </ul>
 
-              <button type="button">
-                Thêm vào giỏ hàng
-              </button>
+              <button type="button">Thêm vào giỏ hàng</button>
             </article>
           </li>
 
@@ -288,9 +346,7 @@
                 <li>Phù hợp với nhiều loại da</li>
               </ul>
 
-              <button type="button">
-                Thêm vào giỏ hàng
-              </button>
+              <button type="button">Thêm vào giỏ hàng</button>
             </article>
           </li>
 
@@ -307,9 +363,7 @@
                 <li>Phù hợp sử dụng hằng ngày</li>
               </ul>
 
-              <button type="button">
-                Thêm vào giỏ hàng
-              </button>
+              <button type="button">Thêm vào giỏ hàng</button>
             </article>
           </li>
         </ul>
@@ -319,9 +373,7 @@
            8. FAQ
       ================================================== -->
       <section id="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title">
-          Câu hỏi thường gặp
-        </h2>
+        <h2 id="faq-title">Câu hỏi thường gặp</h2>
 
         <details>
           <summary>
@@ -329,15 +381,13 @@
           </summary>
 
           <p>
-            Có. Mỗi sản phẩm được trình bày kèm tên thương hiệu và thông tin
-            sản phẩm để khách hàng tham khảo trước khi mua.
+            Có. Mỗi sản phẩm được trình bày kèm tên thương hiệu và thông tin sản
+            phẩm để khách hàng tham khảo trước khi mua.
           </p>
         </details>
 
         <details>
-          <summary>
-            Tôi có thể đổi trả sản phẩm không?
-          </summary>
+          <summary>Tôi có thể đổi trả sản phẩm không?</summary>
 
           <p>
             Khách hàng có thể yêu cầu đổi trả theo điều kiện và thời hạn trong
@@ -346,9 +396,7 @@
         </details>
 
         <details>
-          <summary>
-            Beauty Glow có hỗ trợ tư vấn sản phẩm không?
-          </summary>
+          <summary>Beauty Glow có hỗ trợ tư vấn sản phẩm không?</summary>
 
           <p>
             Có. Khách hàng có thể liên hệ để được hỗ trợ lựa chọn sản phẩm theo
@@ -357,9 +405,7 @@
         </details>
 
         <details>
-          <summary>
-            Beauty Glow có giao hàng toàn quốc không?
-          </summary>
+          <summary>Beauty Glow có giao hàng toàn quốc không?</summary>
 
           <p>
             Website hỗ trợ đặt hàng và giao đến nhiều tỉnh thành theo khu vực
@@ -368,9 +414,7 @@
         </details>
 
         <details>
-          <summary>
-            Tôi có thể xem sản phẩm theo thương hiệu không?
-          </summary>
+          <summary>Tôi có thể xem sản phẩm theo thương hiệu không?</summary>
 
           <p>
             Có. Khách hàng có thể xem các sản phẩm theo từng thương hiệu như
@@ -379,13 +423,11 @@
         </details>
 
         <details>
-          <summary>
-            Giá sản phẩm trên website đã được hiển thị rõ chưa?
-          </summary>
+          <summary>Giá sản phẩm trên website đã được hiển thị rõ chưa?</summary>
 
           <p>
-            Mỗi sản phẩm có giá bán được hiển thị tại khu vực thông tin sản
-            phẩm để khách hàng tham khảo trước khi thêm vào giỏ hàng.
+            Mỗi sản phẩm có giá bán được hiển thị tại khu vực thông tin sản phẩm
+            để khách hàng tham khảo trước khi thêm vào giỏ hàng.
           </p>
         </details>
       </section>
@@ -394,18 +436,14 @@
            9. CTA
       ================================================== -->
       <section id="cta" aria-labelledby="cta-title">
-        <h2 id="cta-title">
-          Sẵn sàng tìm sản phẩm phù hợp với bạn?
-        </h2>
+        <h2 id="cta-title">Sẵn sàng tìm sản phẩm phù hợp với bạn?</h2>
 
         <p>
           Khám phá các sản phẩm chăm sóc da, trang điểm và làm đẹp theo nhu cầu
           của bạn ngay hôm nay.
         </p>
 
-        <a href="#features">
-          Mua sắm ngay
-        </a>
+        <a href="#features"> Mua sắm ngay </a>
       </section>
     </main>
 
@@ -416,8 +454,8 @@
       <h2>Beauty Glow</h2>
 
       <p>
-        Beauty Glow giới thiệu các sản phẩm mỹ phẩm, chăm sóc da và làm đẹp
-        từ nhiều thương hiệu để khách hàng dễ dàng tham khảo và lựa chọn.
+        Beauty Glow giới thiệu các sản phẩm mỹ phẩm, chăm sóc da và làm đẹp từ
+        nhiều thương hiệu để khách hàng dễ dàng tham khảo và lựa chọn.
       </p>
 
       <nav aria-label="Điều hướng chân trang">
