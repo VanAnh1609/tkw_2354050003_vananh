@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Beauty Glow - Cửa hàng mỹ phẩm</title>
+    <title>ANNIE - Cửa hàng mỹ phẩm</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,77 +29,79 @@
     <!-- ==================================================
          1. NAVBAR
     ================================================== -->
-    <header class="bg-surface">
+    <header class="border-line bg-surface">
       <nav
         class="mx-auto flex h-[85px] w-full max-w-[1280px] items-center justify-between px-5 lg:px-0"
         aria-label="Điều hướng chính"
       >
-        <!-- ================= BÊN TRÁI ================= -->
+        <!-- BÊN TRÁI -->
         <div class="flex items-center">
-          <!-- Logo -->
           <a
             href="index.html"
-            class="flex items-center gap-2"
+            class="flex items-center gap-2.5"
             aria-label="Beauty Glow - Trang chủ"
           >
-            <!-- Tạm dùng icon khi chưa thêm ảnh logo -->
-            <span class="text-2xl text-brand-500" aria-hidden="true">✦</span>
-
+            <img
+              src="./assets/img/logo.svg"
+              alt="Annie Logo"
+              class="h-[32.62px] w-[29.76px] object-contain"
+            />
             <span class="font-display text-2xl font-bold text-ink">
-              Beauty Glow
+              Annie
             </span>
           </a>
-
-          <!-- Menu -->
-          <ul class="ml-14 hidden items-center gap-10 lg:flex">
+          <ul class="ml-14 hidden items-center gap-8 lg:flex">
             <li>
               <a
                 href="#hero"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-500"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
               >
                 Trang chủ
               </a>
             </li>
-
             <li>
               <a
                 href="#features"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-500"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
               >
                 Sản phẩm
               </a>
             </li>
-
             <li>
               <a
                 href="#brands"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-500"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
               >
                 Thương hiệu
               </a>
             </li>
-
             <li>
               <a
                 href="#testimonials"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-500"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
               >
                 Đánh giá
               </a>
             </li>
-
+            <li>
+              <a
+                href="#products"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
+              >
+                Nổi bật
+              </a>
+            </li>
             <li>
               <a
                 href="#faq"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-500"
+                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
               >
-                Liên hệ
+                Hỏi đáp
               </a>
             </li>
           </ul>
         </div>
-
-        <!-- ================= BÊN PHẢI ================= -->
+        <!-- BÊN PHẢI -->
         <div class="flex items-center gap-6">
           <a
             href="#login"
@@ -109,10 +111,10 @@
           </a>
 
           <a
-            href="#cta"
-            class="btn bg-brand-500 font-body text-white hover:bg-brand-700"
+            href="#products"
+            class="inline-flex h-[37px] items-center justify-center rounded-lg bg-brand-500 px-5 py-2.5 font-body font-medium text-white hover:bg-brand-700"
           >
-            Mua ngay
+            Mua sắm ngay
           </a>
         </div>
       </nav>
@@ -121,60 +123,66 @@
     <!-- NỘI DUNG CHÍNH -->
     <main id="main-content">
       <!-- ==================================================
-     2. HERO
-================================================== -->
+       2. HERO
+  ================================================== -->
+
       <section
         id="hero"
-        class="section grid items-center gap-14 lg:grid-cols-2 lg:gap-16"
+        class="mx-auto grid w-full max-w-[1280px] items-center gap-14 px-5 py-16 lg:grid-cols-2 lg:gap-16 lg:px-0"
         aria-labelledby="hero-title"
       >
-        <!-- BÊN TRÁI -->
-        <div>
-          <p class="mb-4 font-body text-base font-medium text-brand-500">
-            Chăm sóc vẻ đẹp mỗi ngày
-          </p>
+        <!-- Bên trái -->
+
+        <div class="flex w-[736px] flex-col items-start gap-[24px]">
+          <!-- Heading -->
 
           <h1
             id="hero-title"
-            class="font-display text-4xl font-bold leading-tight text-ink sm:text-5xl lg:text-6xl"
+            class="font-body -translate-y-[1px] text-[60px] font-black leading-[68px] text-ink"
           >
-            Khám phá vẻ đẹp
+            <span class="relative top-[10px]"> Nâng niu làn da </span>
             <br />
-            tự nhiên của bạn
+            thăng hoa nhan sắc
           </h1>
 
-          <p class="mt-6 max-w-xl font-body text-base leading-7 text-muted">
+          <!-- Supporting text -->
+          <p
+            class="font-body text-[20px] font-normal leading-[28px] tracking-tight text-muted"
+          >
             Khám phá các sản phẩm chăm sóc da, trang điểm và làm đẹp chính hãng
             từ những thương hiệu được yêu thích.
           </p>
 
-          <div class="mt-8 flex flex-wrap gap-4">
+          <div
+            class="mt-8 -translate-y-[15px] flex flex-wrap items-center gap-4"
+          >
+            <!-- Nút chính -->
             <a
               href="#features"
-              class="btn bg-brand-500 font-body text-white hover:bg-brand-700"
+              class="inline-flex h-12 items-center justify-center rounded-lg bg-brand-500 px-6 font-body text-base font-semibold text-white transition-colors hover:bg-brand-700"
             >
               Khám phá sản phẩm
             </a>
 
+            <!-- Nút phụ -->
             <a
               href="#brands"
-              class="btn border border-brand-400 bg-white font-body text-brand-700 hover:bg-brand-50"
+              class="inline-flex h-12 items-center justify-center rounded-lg border border-brand-400 bg-white px-6 font-body text-base font-medium text-brand-700 transition-colors hover:bg-brand-50"
             >
               Xem thương hiệu
             </a>
           </div>
         </div>
 
-        <!-- BÊN PHẢI -->
-        <figure class="flex items-center justify-center">
+        <!-- Bên phải -->
+        <figure class="flex items-center justify-end">
           <img
-            src="./assets/img/hero-cosmetics.png"
+            src="./assets/img/hero-cosmetics.jpg"
             alt="Bộ sản phẩm mỹ phẩm chăm sóc da"
-            class="w-full max-w-lg object-contain"
+            class="h-[416px] w-[532px] object-contain"
           />
         </figure>
       </section>
-
       <!-- ==================================================
            3. LOGO THƯƠNG HIỆU
       ================================================== -->
