@@ -22,12 +22,37 @@
   /* ===== Font ===== */
   --font-display: "Be Vietnam Pro", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
+
+  --radius-card: 0.875rem;
+  --radius-pill: 999px;
 }
 
 .section {
   @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
 }
 
-.btn {
-  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors;
+@layer components {
+  /* Nút chính màu hồng */
+  .btn-primary {
+    @apply bg-brand-500 font-semibold text-white shadow-sm transition-colors hover:bg-brand-700;
+  }
+
+  /* Nút phụ màu hồng nhạt */
+  .btn-brand {
+    @apply bg-brand-100 font-semibold text-brand-700 shadow-sm transition-colors hover:bg-brand-400 hover:text-white;
+  }
+
+  /* Nút viền */
+  .btn-outline {
+    @apply border border-brand-400 bg-white font-medium text-brand-700 transition-colors hover:bg-brand-50;
+  }
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-surface font-body text-ink antialiased;
+  }
 }
