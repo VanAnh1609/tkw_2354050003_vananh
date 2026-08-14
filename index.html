@@ -1,118 +1,104 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>ANNIE - Cửa hàng mỹ phẩm</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Be Vietnam Pro -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Inter -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
 
-  <body>
+  <body class="bg-surface font-body text-ink antialiased">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-brand-500 focus:p-4 focus:text-white"
+    >
+      Bỏ qua đến nội dung chính
+    </a>
+
     <!-- ==================================================
-         1. NAVBAR
+         HEADER / NAVBAR
     ================================================== -->
-    <header class="border-line bg-surface">
+    <header class="w-full border-b border-line bg-surface">
       <nav
-        class="mx-auto flex h-[85px] w-full max-w-[1280px] items-center justify-between px-5 lg:px-0"
+        class="mx-auto flex h-[85px] w-[1280px] items-center justify-between py-[24px]"
         aria-label="Điều hướng chính"
       >
-        <!-- BÊN TRÁI -->
-        <div class="flex items-center">
+        <div class="flex items-center gap-[32px]">
           <a
             href="index.html"
-            class="flex items-center gap-2.5"
-            aria-label="Beauty Glow - Trang chủ"
+            class="flex h-[36px] items-center gap-[12px]"
+            aria-label="Annie - Trang chủ"
           >
             <img
               src="./assets/img/logo.svg"
-              alt="Annie Logo"
-              class="h-[32.62px] w-[29.76px] object-contain"
+              alt=""
+              class="h-[32.62px] w-[29.76px] shrink-0 object-contain"
             />
-            <span class="font-display text-2xl font-bold text-ink">
+            <span
+              class="font-display text-[24px] font-semibold leading-[150%] tracking-tight text-ink"
+            >
               Annie
             </span>
           </a>
-          <ul class="ml-14 hidden items-center gap-8 lg:flex">
+
+          <ul class="flex items-center gap-[32px]">
             <li>
               <a
                 href="#hero"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
+                class="font-body text-[16px] font-medium text-ink hover:text-brand-500"
+                >Trang chủ</a
               >
-                Trang chủ
-              </a>
             </li>
             <li>
               <a
                 href="#features"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
+                class="font-body text-[16px] font-medium text-ink hover:text-brand-500"
+                >Sản phẩm</a
               >
-                Sản phẩm
-              </a>
             </li>
             <li>
               <a
                 href="#brands"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
+                class="font-body text-[16px] font-medium text-ink hover:text-brand-500"
+                >Thương hiệu</a
               >
-                Thương hiệu
-              </a>
             </li>
             <li>
               <a
                 href="#testimonials"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
+                class="font-body text-[16px] font-medium text-ink hover:text-brand-500"
+                >Đánh giá</a
               >
-                Đánh giá
-              </a>
-            </li>
-            <li>
-              <a
-                href="#products"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
-              >
-                Nổi bật
-              </a>
             </li>
             <li>
               <a
                 href="#faq"
-                class="font-body text-base font-medium text-ink transition-colors hover:text-brand-600"
+                class="font-body text-[16px] font-medium text-ink hover:text-brand-500"
+                >Hỏi đáp</a
               >
-                Hỏi đáp
-              </a>
             </li>
           </ul>
         </div>
-        <!-- BÊN PHẢI -->
-        <div class="flex items-center gap-6">
+
+        <div class="flex items-center gap-[16px]">
           <a
             href="#login"
-            class="hidden font-body text-base font-medium text-ink transition-colors hover:text-brand-500 lg:block"
+            class="font-body text-[14px] font-medium text-ink hover:text-brand-500"
           >
             Đăng nhập
           </a>
-
           <a
-            href="#products"
-            class="inline-flex h-[37px] items-center justify-center rounded-lg bg-brand-500 px-5 py-2.5 font-body font-medium text-white hover:bg-brand-700"
+            href="#pricing"
+            class="btn-primary rounded-card px-[12px] py-[8px] font-body text-[14px] font-medium"
           >
             Mua sắm ngay
           </a>
@@ -120,413 +106,382 @@
       </nav>
     </header>
 
-    <!-- NỘI DUNG CHÍNH -->
     <main id="main-content">
       <!-- ==================================================
-       2. HERO
-  ================================================== -->
-
+           HERO
+      ================================================== -->
       <section
         id="hero"
-        class="mx-auto grid w-full max-w-[1280px] items-center gap-14 px-5 py-16 lg:grid-cols-2 lg:gap-16 lg:px-0"
+        class="w-full bg-surface py-[64px]"
         aria-labelledby="hero-title"
       >
-        <!-- Bên trái -->
+        <div
+          class="mx-auto flex h-[416px] w-[1280px] items-center justify-between gap-[96px]"
+        >
+          <div class="flex w-[736px] flex-col items-start gap-[40px]">
+            <div class="flex w-[736px] flex-col items-start gap-[24px]">
+              <h1
+                id="hero-title"
+                class="font-display text-[52px] font-extrabold leading-[56px] -tracking-[0.03em] text-ink"
+              >
+                Nâng niu làn da
+                <br />
+                thăng hoa nhan sắc.
+              </h1>
 
-        <div class="flex w-[736px] flex-col items-start gap-[24px]">
-          <!-- Heading -->
+              <p class="font-body text-[18px] leading-[150%] text-muted">
+                Khám phá các sản phẩm chăm sóc da, trang điểm và làm đẹp chính
+                hãng từ những thương hiệu được yêu thích.
+              </p>
+            </div>
 
-          <h1
-            id="hero-title"
-            class="font-body -translate-y-[1px] text-[60px] font-black leading-[68px] text-ink"
-          >
-            <span class="relative top-[10px]"> Nâng niu làn da </span>
-            <br />
-            thăng hoa nhan sắc
-          </h1>
+            <div class="flex items-center gap-[16px]">
+              <a
+                href="#features"
+                class="btn-primary rounded-card h-[48px] px-[20px] py-[12px] font-body text-[16px] font-medium whitespace-nowrap"
+              >
+                Khám phá sản phẩm
+              </a>
+              <a
+                href="#brands"
+                class="btn-outline rounded-card h-[48px] px-[20px] py-[12px] font-body text-[16px] font-medium whitespace-nowrap"
+              >
+                Xem thương hiệu
+              </a>
+            </div>
+          </div>
 
-          <!-- Supporting text -->
-          <p
-            class="font-body text-[20px] font-normal leading-[28px] tracking-tight text-muted"
-          >
-            Khám phá các sản phẩm chăm sóc da, trang điểm và làm đẹp chính hãng
-            từ những thương hiệu được yêu thích.
-          </p>
+          <figure class="flex items-center justify-between">
+            <img
+              src="./assets/img/hero-cosmetics.jpg"
+              alt="Bộ sản phẩm mỹ phẩm chăm sóc da"
+              class="h-[416px] w-[532px] object-contain"
+            />
+          </figure>
+        </div>
+      </section>
 
-          <div
-            class="mt-8 -translate-y-[15px] flex flex-wrap items-center gap-4"
-          >
-            <!-- Nút chính -->
-            <a
-              href="#features"
-              class="inline-flex h-12 items-center justify-center rounded-lg bg-brand-500 px-6 font-body text-base font-semibold text-white transition-colors hover:bg-brand-700"
+      <!-- ==================================================
+           LOGO THƯƠNG HIỆU
+      ================================================== -->
+      <section
+        id="brands"
+        class="w-full bg-surface pb-[96px]"
+        aria-labelledby="brands-title"
+      >
+        <div
+          class="mx-auto flex h-[55px] w-[1280px] items-center justify-between"
+        >
+          <h2 id="brands-title" class="sr-only">
+            Các thương hiệu mỹ phẩm nổi bật
+          </h2>
+
+          <ul class="flex h-[55px] w-[1280px] items-center justify-between">
+            <li
+              class="flex h-[41.76px] w-[128px] shrink-0 items-center justify-center"
             >
-              Khám phá sản phẩm
-            </a>
-
-            <!-- Nút phụ -->
-            <a
-              href="#brands"
-              class="inline-flex h-12 items-center justify-center rounded-lg border border-brand-400 bg-white px-6 font-body text-base font-medium text-brand-700 transition-colors hover:bg-brand-50"
+              <img
+                src="./assets/img/loreal.svg"
+                alt="L'Oréal"
+                class="max-h-full max-w-full object-contain"
+              />
+            </li>
+            <li
+              class="flex h-[32.81px] w-[150px] shrink-0 items-center justify-center"
             >
-              Xem thương hiệu
-            </a>
+              <img
+                src="./assets/img/maybelline.svg"
+                alt="Maybelline"
+                class="max-h-full max-w-full object-contain"
+              />
+            </li>
+            <li
+              class="flex h-[39.99px] w-[128px] shrink-0 items-center justify-center"
+            >
+              <img
+                src="./assets/img/laroche-posay.svg"
+                alt="La Roche-Posay"
+                class="max-h-full max-w-full object-contain"
+              />
+            </li>
+            <li
+              class="flex h-[37.23px] w-[136px] shrink-0 items-center justify-center"
+            >
+              <img
+                src="./assets/img/cerave.svg"
+                alt="CeraVe"
+                class="max-h-full max-w-full object-contain"
+              />
+            </li>
+            <li
+              class="flex h-[55px] w-[110px] shrink-0 items-center justify-center"
+            >
+              <img
+                src="./assets/img/nivea.svg"
+                alt="NIVEA"
+                class="max-h-full max-w-full object-contain"
+              />
+            </li>
+            <li
+              class="flex h-[37px] w-[132px] shrink-0 items-center justify-center"
+            >
+              <img
+                src="./assets/img/dove.svg"
+                alt="Dove"
+                class="max-h-full max-w-full object-contain"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ==================================================
+           FEATURES - GIỮ ĐÚNG BỐ CỤC BÀI MẪU
+      ================================================== -->
+      <section
+        id="features"
+        class="w-full bg-brand-50 py-[96px]"
+        aria-labelledby="features-title"
+      >
+        <div
+          class="mx-auto flex w-[1280px] flex-col gap-[80px] translate-y-[30px]"
+        >
+          <!-- HÀNG 1: TEXT TRÁI - ẢNH PHẢI -->
+          <div class="flex h-[455px] w-[1280px] items-start justify-between">
+            <div class="flex h-[404px] w-[608px] flex-col items-start">
+              <div
+                class="flex h-[151px] w-[608px] flex-col items-start gap-[16px]"
+              >
+                <h2
+                  id="features-title"
+                  class="font-display text-[30px] font-extrabold leading-[38px] tracking-[-0.02em] text-ink"
+                >
+                  Chăm sóc sắc đẹp theo cách của bạn
+                </h2>
+
+                <p
+                  class="h-[90px] font-body text-[18px] leading-[30px] text-muted"
+                >
+                  Annie mang đến trải nghiệm mua sắm mỹ phẩm dễ dàng với thông
+                  tin rõ ràng, sản phẩm đa dạng và những lựa chọn phù hợp cho
+                  từng nhu cầu chăm sóc sắc đẹp.
+                </p>
+              </div>
+
+              <div class="flex h-[221px] w-[608px] flex-col items-start">
+                <div class="h-[1px] w-[608px] bg-line"></div>
+
+                <div
+                  class="mt-[35px] flex h-[220px] w-[608px] flex-col items-start gap-[24px] pt-[24px]"
+                >
+                  <ul class="flex h-[136px] flex-col gap-[16px]">
+                    <li class="flex h-[20px] items-center gap-[12px]">
+                      <svg
+                        class="h-[20px] w-[20px] shrink-0 text-brand-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span class="font-body text-[15px] font-medium text-ink"
+                        >Sản phẩm từ nhiều thương hiệu được yêu thích</span
+                      >
+                    </li>
+
+                    <li class="flex h-[20px] items-center gap-[12px]">
+                      <svg
+                        class="h-[20px] w-[20px] shrink-0 text-brand-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span class="font-body text-[15px] font-medium text-ink"
+                        >Thông tin sản phẩm rõ ràng và dễ tham khảo</span
+                      >
+                    </li>
+
+                    <li class="flex h-[20px] items-center gap-[12px]">
+                      <svg
+                        class="h-[20px] w-[20px] shrink-0 text-brand-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span class="font-body text-[15px] font-medium text-ink"
+                        >Dễ dàng tìm sản phẩm phù hợp với từng nhu cầu</span
+                      >
+                    </li>
+                  </ul>
+
+                  <p
+                    class="h-[60px] font-body text-[18px] leading-[30px] text-muted"
+                  >
+                    Annie giúp việc xây dựng chu trình làm đẹp mỗi ngày trở nên
+                    đơn giản và thuận tiện hơn.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <figure
+              class="flex h-[435px] w-[598px] items-center justify-center"
+            >
+              <img
+                src="./assets/img/feature-cosmetics.png"
+                alt="Bảng gợi ý mỹ phẩm và chu trình chăm sóc da"
+                class="h-[435px] w-[598px] object-contain"
+              />
+            </figure>
+          </div>
+
+          <!-- HÀNG 2: ẢNH TRÁI - TEXT PHẢI -->
+          <div class="flex h-[454px] w-[1280px] items-start justify-between">
+            <figure
+              class="flex h-[434px] w-[598px] items-center justify-center"
+            >
+              <img
+                src="./assets/img/hero-cosmetics.jpg"
+                alt="Bộ sản phẩm chăm sóc da và trang điểm"
+                class="h-[434px] w-[598px] rounded-card object-cover"
+              />
+            </figure>
+
+            <div class="flex h-[400px] w-[608px] flex-col items-start">
+              <div
+                class="flex h-[151px] w-[608px] flex-col items-start gap-[16px]"
+              >
+                <h3
+                  class="font-display text-[30px] font-extrabold leading-[38px] tracking-[-0.02em] text-ink"
+                >
+                  Khám phá vẻ đẹp phù hợp với bạn
+                </h3>
+
+                <p
+                  class="h-[90px] font-body text-[18px] leading-[30px] text-muted"
+                >
+                  Mỗi làn da có một nhu cầu riêng. Annie giúp bạn khám phá sản
+                  phẩm phù hợp từ chăm sóc da đến trang điểm một cách dễ dàng và
+                  trực quan.
+                </p>
+              </div>
+
+              <div class="flex h-[217px] w-[608px] flex-col items-start">
+                <div class="mt-[30px] h-[1px] w-[608px] bg-line"></div>
+
+                <ul class="flex h-[216px] flex-col gap-[16px] pt-[24px]">
+                  <li class="flex h-[20px] items-center gap-[12px]">
+                    <svg
+                      class="h-[20px] w-[20px] shrink-0 text-brand-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="font-body text-[15px] font-medium text-ink"
+                      >Đa dạng sản phẩm chăm sóc da và trang điểm</span
+                    >
+                  </li>
+
+                  <li class="flex h-[20px] items-center gap-[12px]">
+                    <svg
+                      class="h-[20px] w-[20px] shrink-0 text-brand-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="font-body text-[15px] font-medium text-ink"
+                      >Lựa chọn theo thương hiệu và nhu cầu cá nhân</span
+                    >
+                  </li>
+
+                  <li class="flex h-[20px] items-center gap-[12px]">
+                    <svg
+                      class="h-[20px] w-[20px] shrink-0 text-brand-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="font-body text-[15px] font-medium text-ink"
+                      >Lưu sản phẩm yêu thích để dễ dàng xem lại</span
+                    >
+                  </li>
+
+                  <li class="flex h-[20px] items-center gap-[12px]">
+                    <svg
+                      class="h-[20px] w-[20px] shrink-0 text-brand-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="font-body text-[15px] font-medium text-ink"
+                      >Thông tin giá bán và công dụng được trình bày rõ
+                      ràng</span
+                    >
+                  </li>
+
+                  <li class="flex h-[20px] items-center gap-[12px]">
+                    <svg
+                      class="h-[20px] w-[20px] shrink-0 text-brand-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="font-body text-[15px] font-medium text-ink"
+                      >Hỗ trợ xây dựng chu trình làm đẹp phù hợp</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- Bên phải -->
-        <figure class="flex items-center justify-end">
-          <img
-            src="./assets/img/hero-cosmetics.jpg"
-            alt="Bộ sản phẩm mỹ phẩm chăm sóc da"
-            class="h-[416px] w-[532px] object-contain"
-          />
-        </figure>
-      </section>
-      <!-- ==================================================
-           3. LOGO THƯƠNG HIỆU
-      ================================================== -->
-      <section id="brands" aria-labelledby="brands-title">
-        <h2 id="brands-title">Thương hiệu đồng hành cùng Beauty Glow</h2>
-
-        <p>
-          Beauty Glow giới thiệu các sản phẩm đến từ nhiều thương hiệu mỹ phẩm
-          được khách hàng yêu thích.
-        </p>
-
-        <ul>
-          <li>L'Oréal Paris</li>
-          <li>Maybelline</li>
-          <li>La Roche-Posay</li>
-          <li>Laneige</li>
-          <li>The Ordinary</li>
-          <li>SK-II</li>
-        </ul>
-      </section>
-
-      <!-- ==================================================
-           4. TÍNH NĂNG
-      ================================================== -->
-      <section id="features" aria-labelledby="features-title">
-        <h2 id="features-title">Trải nghiệm mua sắm tại Beauty Glow</h2>
-
-        <p>
-          Beauty Glow giúp khách hàng dễ dàng tìm kiếm sản phẩm phù hợp, xem
-          thông tin rõ ràng và lựa chọn mỹ phẩm theo nhu cầu chăm sóc cá nhân.
-        </p>
-
-        <ul>
-          <li>
-            <article>
-              <h3>Sản phẩm có nguồn gốc rõ ràng</h3>
-              <p>
-                Mỗi sản phẩm hiển thị thương hiệu, thông tin sử dụng và nhóm nhu
-                cầu chăm sóc phù hợp để khách hàng dễ lựa chọn.
-              </p>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <h3>Đa dạng nhóm sản phẩm</h3>
-              <p>
-                Có các sản phẩm chăm sóc da, trang điểm, nước hoa và chăm sóc cơ
-                thể từ nhiều thương hiệu khác nhau.
-              </p>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <h3>Tìm kiếm sản phẩm dễ dàng</h3>
-              <p>
-                Khách hàng có thể xem sản phẩm theo thương hiệu, loại sản phẩm
-                và nhu cầu làm đẹp.
-              </p>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <h3>Thông tin mua hàng rõ ràng</h3>
-              <p>
-                Giá bán, mô tả sản phẩm và chính sách hỗ trợ được trình bày rõ
-                trước khi khách hàng lựa chọn.
-              </p>
-            </article>
-          </li>
-        </ul>
-      </section>
-
-      <!-- ==================================================
-           5. SỐ LIỆU
-      ================================================== -->
-      <section id="statistics" aria-labelledby="statistics-title">
-        <h2 id="statistics-title">Beauty Glow qua những con số</h2>
-
-        <p>
-          Một số con số minh họa quy mô sản phẩm và mức độ quan tâm của khách
-          hàng.
-        </p>
-
-        <dl>
-          <div>
-            <dt>Sản phẩm</dt>
-            <dd>1.000+</dd>
-          </div>
-
-          <div>
-            <dt>Thương hiệu</dt>
-            <dd>50+</dd>
-          </div>
-
-          <div>
-            <dt>Khách hàng</dt>
-            <dd>10.000+</dd>
-          </div>
-
-          <div>
-            <dt>Đánh giá tích cực</dt>
-            <dd>98%</dd>
-          </div>
-        </dl>
-      </section>
-
-      <!-- ==================================================
-           6. CẢM NHẬN
-      ================================================== -->
-      <section id="testimonials" aria-labelledby="testimonials-title">
-        <h2 id="testimonials-title">Khách hàng nói gì về Beauty Glow</h2>
-
-        <ul>
-          <li>
-            <article>
-              <blockquote>
-                <p>
-                  “Sản phẩm được đóng gói cẩn thận, thông tin rõ ràng và giao
-                  hàng đúng thời gian dự kiến.”
-                </p>
-              </blockquote>
-
-              <p>Nguyễn Minh Anh</p>
-              <p>Khách hàng</p>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <blockquote>
-                <p>
-                  “Mình dễ dàng tìm được serum và kem dưỡng phù hợp với nhu cầu
-                  chăm sóc da hằng ngày.”
-                </p>
-              </blockquote>
-
-              <p>Trần Ngọc Mai</p>
-              <p>Khách hàng</p>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <blockquote>
-                <p>
-                  “Có nhiều thương hiệu để lựa chọn, giá bán và thông tin sản
-                  phẩm được trình bày rõ ràng.”
-                </p>
-              </blockquote>
-
-              <p>Lê Hoàng Yến</p>
-              <p>Khách hàng</p>
-            </article>
-          </li>
-        </ul>
-      </section>
-
-      <!-- ==================================================
-           7. BẢNG GIÁ
-      ================================================== -->
-      <section id="pricing" aria-labelledby="pricing-title">
-        <h2 id="pricing-title">Bảng giá sản phẩm nổi bật</h2>
-
-        <p>
-          Tham khảo ba sản phẩm thuộc các nhóm chăm sóc da phổ biến tại Beauty
-          Glow.
-        </p>
-
-        <ul>
-          <li>
-            <article>
-              <h3>Serum dưỡng da</h3>
-
-              <p>The Ordinary Niacinamide 10% + Zinc 1%</p>
-              <p>299.000 đồng</p>
-
-              <ul>
-                <li>Phù hợp với nhu cầu chăm sóc da dầu</li>
-                <li>Hỗ trợ cải thiện bề mặt da</li>
-                <li>Dùng trong chu trình chăm sóc da hằng ngày</li>
-              </ul>
-
-              <button type="button">Thêm vào giỏ hàng</button>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <h3>Kem dưỡng ẩm</h3>
-
-              <p>Laneige Water Bank Cream</p>
-              <p>690.000 đồng</p>
-
-              <ul>
-                <li>Hỗ trợ bổ sung độ ẩm cho da</li>
-                <li>Kết cấu mềm nhẹ</li>
-                <li>Phù hợp với nhiều loại da</li>
-              </ul>
-
-              <button type="button">Thêm vào giỏ hàng</button>
-            </article>
-          </li>
-
-          <li>
-            <article>
-              <h3>Kem chống nắng</h3>
-
-              <p>La Roche-Posay Anthelios</p>
-              <p>450.000 đồng</p>
-
-              <ul>
-                <li>Dùng trong chu trình chăm sóc da ban ngày</li>
-                <li>Kết cấu nhẹ</li>
-                <li>Phù hợp sử dụng hằng ngày</li>
-              </ul>
-
-              <button type="button">Thêm vào giỏ hàng</button>
-            </article>
-          </li>
-        </ul>
-      </section>
-
-      <!-- ==================================================
-           8. FAQ
-      ================================================== -->
-      <section id="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title">Câu hỏi thường gặp</h2>
-
-        <details>
-          <summary>
-            Sản phẩm tại Beauty Glow có thông tin nguồn gốc không?
-          </summary>
-
-          <p>
-            Có. Mỗi sản phẩm được trình bày kèm tên thương hiệu và thông tin sản
-            phẩm để khách hàng tham khảo trước khi mua.
-          </p>
-        </details>
-
-        <details>
-          <summary>Tôi có thể đổi trả sản phẩm không?</summary>
-
-          <p>
-            Khách hàng có thể yêu cầu đổi trả theo điều kiện và thời hạn trong
-            chính sách đổi trả được công bố trên website.
-          </p>
-        </details>
-
-        <details>
-          <summary>Beauty Glow có hỗ trợ tư vấn sản phẩm không?</summary>
-
-          <p>
-            Có. Khách hàng có thể liên hệ để được hỗ trợ lựa chọn sản phẩm theo
-            nhu cầu chăm sóc da và làm đẹp.
-          </p>
-        </details>
-
-        <details>
-          <summary>Beauty Glow có giao hàng toàn quốc không?</summary>
-
-          <p>
-            Website hỗ trợ đặt hàng và giao đến nhiều tỉnh thành theo khu vực
-            phục vụ của đơn vị vận chuyển.
-          </p>
-        </details>
-
-        <details>
-          <summary>Tôi có thể xem sản phẩm theo thương hiệu không?</summary>
-
-          <p>
-            Có. Khách hàng có thể xem các sản phẩm theo từng thương hiệu như
-            Laneige, The Ordinary, La Roche-Posay và các thương hiệu khác.
-          </p>
-        </details>
-
-        <details>
-          <summary>Giá sản phẩm trên website đã được hiển thị rõ chưa?</summary>
-
-          <p>
-            Mỗi sản phẩm có giá bán được hiển thị tại khu vực thông tin sản phẩm
-            để khách hàng tham khảo trước khi thêm vào giỏ hàng.
-          </p>
-        </details>
-      </section>
-
-      <!-- ==================================================
-           9. CTA
-      ================================================== -->
-      <section id="cta" aria-labelledby="cta-title">
-        <h2 id="cta-title">Sẵn sàng tìm sản phẩm phù hợp với bạn?</h2>
-
-        <p>
-          Khám phá các sản phẩm chăm sóc da, trang điểm và làm đẹp theo nhu cầu
-          của bạn ngay hôm nay.
-        </p>
-
-        <a href="#features"> Mua sắm ngay </a>
       </section>
     </main>
-
-    <!-- ==================================================
-         10. FOOTER
-    ================================================== -->
-    <footer>
-      <h2>Beauty Glow</h2>
-
-      <p>
-        Beauty Glow giới thiệu các sản phẩm mỹ phẩm, chăm sóc da và làm đẹp từ
-        nhiều thương hiệu để khách hàng dễ dàng tham khảo và lựa chọn.
-      </p>
-
-      <nav aria-label="Điều hướng chân trang">
-        <h3>Liên kết nhanh</h3>
-
-        <ul>
-          <li><a href="#hero">Trang chủ</a></li>
-          <li><a href="#features">Sản phẩm</a></li>
-          <li><a href="#brands">Thương hiệu</a></li>
-          <li><a href="#pricing">Bảng giá</a></li>
-          <li><a href="#faq">Câu hỏi thường gặp</a></li>
-        </ul>
-      </nav>
-
-      <h3>Hỗ trợ khách hàng</h3>
-
-      <ul>
-        <li><a href="#">Chính sách giao hàng</a></li>
-        <li><a href="#">Chính sách đổi trả</a></li>
-        <li><a href="#">Chính sách bảo mật</a></li>
-        <li><a href="#">Điều khoản sử dụng</a></li>
-      </ul>
-
-      <h3>Liên hệ</h3>
-
-      <address>
-        <p>Email: support@beautyglow.vn</p>
-        <p>Điện thoại: 0123 456 789</p>
-        <p>TP. Hồ Chí Minh, Việt Nam</p>
-      </address>
-
-      <p>2026 Beauty Glow. All rights reserved.</p>
-    </footer>
   </body>
 </html>
