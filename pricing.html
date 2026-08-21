@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="vi" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANNIE - Bảng giá</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="overflow-x-hidden bg-surface font-body text-ink antialiased">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-brand-500 focus:p-4 focus:text-white"
+      >Bỏ qua đến nội dung chính</a
+    >
+
+    <header
+      class="w-full border-b border-line dark:border-line-invert bg-surface dark:bg-surface-dark"
+    >
+      <nav
+        class="mx-auto flex w-full items-center justify-between px-5 py-4 lg:h-[85px] lg:max-w-[1280px] lg:px-0 lg:py-[24px]"
+        aria-label="Điều hướng chính"
+      >
+        <div class="flex items-center gap-[32px]">
+          <a
+            href="index.html"
+            class="flex items-center gap-[10px] lg:h-[36px] lg:gap-[12px]"
+            aria-label="Annie - Trang chủ"
+          >
+            <img
+              src="./assets/img/logo.svg"
+              alt=""
+              class="h-[28px] w-[26px] shrink-0 object-contain lg:h-[32.62px] lg:w-[29.76px]"
+            />
+            <span
+              class="font-display text-[20px] font-semibold leading-[150%] tracking-tight text-ink dark:text-ink-invert lg:text-[24px]"
+            >
+              Annie
+            </span>
+          </a>
+
+          <ul class="hidden items-center gap-[32px] lg:flex">
+            <li>
+              <a
+                href="index.html#hero"
+                class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
+                >Trang chủ</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#features"
+                class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
+                >Sản phẩm</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#brands"
+                class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
+                >Thương hiệu</a
+              >
+            </li>
+            <li>
+              <a
+                href="pricing.html"
+                class="font-body text-[16px] font-semibold text-brand-500"
+                >Bảng giá</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="hidden items-center gap-[16px] lg:flex">
+          <a
+            href="index.html#login"
+            class="font-body text-[14px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
+            >Đăng nhập</a
+          >
+          <a
+            href="pricing.html"
+            class="btn-primary rounded-card px-[12px] py-[8px] font-body text-[14px] font-medium"
+            >Mua sắm ngay</a
+          >
+        </div>
+
+        <button
+          type="button"
+          class="flex h-10 w-10 items-center justify-center rounded-card text-ink dark:text-ink-invert lg:hidden"
+          aria-label="Mở menu"
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="surface py-16 lg:py-24">
+        <div class="mx-auto w-full max-w-[900px] px-5 text-center">
+          <p class="eyebrow">Lựa chọn phù hợp với nhu cầu của bạn</p>
+          <h1
+            class="mt-3 font-display text-[34px] font-extrabold leading-[42px] tracking-[-0.02em] sm:text-[42px] sm:leading-[50px] lg:text-[52px] lg:leading-[60px]"
+          >
+            Bảng giá sản phẩm Annie
+          </h1>
+          <p
+            class="mx-auto mt-5 max-w-[720px] text-[16px] leading-[28px] text-muted dark:text-muted-invert lg:text-[18px]"
+          >
+            Tham khảo các lựa chọn phổ biến và so sánh nhanh tính năng để tìm
+            sản phẩm phù hợp với chu trình chăm sóc da của bạn.
+          </p>
+        </div>
+      </section>
+
+      <section id="plans" class="surface py-16 lg:py-24">
+        <div class="mx-auto w-full max-w-[1280px] px-5 xl:px-0">
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+            <article class="card flex h-full flex-col">
+              <p class="eyebrow">Cơ bản</p>
+              <h2 class="mt-2 font-display text-[26px] font-bold">
+                Serum dưỡng da
+              </h2>
+              <p
+                class="mt-3 text-[16px] leading-[26px] text-muted dark:text-muted-invert"
+              >
+                Phù hợp với chu trình chăm sóc da dầu và da hỗn hợp.
+              </p>
+              <div class="mt-7">
+                <span class="font-display text-[38px] font-extrabold"
+                  >299.000đ</span
+                >
+              </div>
+              <ul
+                class="mt-7 flex flex-col gap-4 text-[15px] text-muted dark:text-muted-invert"
+              >
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Hỗ trợ chăm sóc làn da dầu</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Kết cấu nhẹ, dễ sử dụng</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Dùng trong chu trình hằng ngày</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Phù hợp cho làn da dễ bí tắc</span>
+                </li>
+              </ul>
+              <a
+                href="contact.html"
+                class="btn btn-outline mt-8 w-full px-4 py-3"
+                >Tư vấn sản phẩm</a
+              >
+            </article>
+
+            <article class="card flex h-full flex-col border-brand-400">
+              <span
+                class="inline-flex w-fit rounded-pill bg-brand-100 px-3 py-1 text-[12px] font-semibold text-brand-700"
+                >Phổ biến</span
+              >
+              <h2 class="mt-3 font-display text-[26px] font-bold">
+                Kem dưỡng ẩm
+              </h2>
+              <p
+                class="mt-3 text-[16px] leading-[26px] text-muted dark:text-muted-invert"
+              >
+                Lựa chọn dịu nhẹ để bổ sung độ ẩm cho làn da mỗi ngày.
+              </p>
+              <div class="mt-7">
+                <span class="font-display text-[38px] font-extrabold"
+                  >690.000đ</span
+                >
+              </div>
+              <ul
+                class="mt-7 flex flex-col gap-4 text-[15px] text-muted dark:text-muted-invert"
+              >
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Hỗ trợ bổ sung độ ẩm</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Kết cấu mềm mịn, dễ thoa</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Phù hợp với nhiều loại da</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Dễ kết hợp cùng serum</span>
+                </li>
+              </ul>
+              <a
+                href="contact.html"
+                class="btn btn-primary mt-8 w-full px-4 py-3"
+                >Chọn sản phẩm</a
+              >
+            </article>
+
+            <article
+              class="card flex h-full flex-col md:col-span-2 lg:col-span-1"
+            >
+              <p class="eyebrow">Ban ngày</p>
+              <h2 class="mt-2 font-display text-[26px] font-bold">
+                Kem chống nắng
+              </h2>
+              <p
+                class="mt-3 text-[16px] leading-[26px] text-muted dark:text-muted-invert"
+              >
+                Lựa chọn tiện lợi cho bước chăm sóc da vào ban ngày.
+              </p>
+              <div class="mt-7">
+                <span class="font-display text-[38px] font-extrabold"
+                  >450.000đ</span
+                >
+              </div>
+              <ul
+                class="mt-7 flex flex-col gap-4 text-[15px] text-muted dark:text-muted-invert"
+              >
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Dùng trong chu trình ban ngày</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Kết cấu nhẹ, dễ sử dụng</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Phù hợp sử dụng hằng ngày</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-500">✓</span
+                  ><span>Thiết kế tiện lợi, dễ mang theo</span>
+                </li>
+              </ul>
+              <a
+                href="contact.html"
+                class="btn btn-outline mt-8 w-full px-4 py-3"
+                >Tư vấn sản phẩm</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="surface-soft py-16 lg:py-24"
+        aria-labelledby="compare-title"
+      >
+        <div class="mx-auto w-full max-w-[1280px] px-5 xl:px-0">
+          <p class="eyebrow">So sánh nhanh</p>
+          <h2
+            id="compare-title"
+            class="mt-2 font-display text-[30px] font-extrabold leading-[38px] lg:text-[36px]"
+          >
+            So sánh các lựa chọn
+          </h2>
+          <p class="mt-2 text-sm text-muted dark:text-muted-invert lg:hidden">
+            Vuốt ngang để xem hết bảng.
+          </p>
+
+          <div
+            class="mt-8 overflow-x-auto rounded-card border border-line dark:border-line-invert"
+          >
+            <table
+              class="min-w-[720px] w-full border-collapse bg-surface text-left dark:bg-surface-dark-alt"
+            >
+              <thead>
+                <tr class="border-b border-line dark:border-line-invert">
+                  <th class="p-4 text-[14px] font-semibold">Tiêu chí</th>
+                  <th class="p-4 text-[14px] font-semibold">Serum</th>
+                  <th class="p-4 text-[14px] font-semibold">Kem dưỡng</th>
+                  <th class="p-4 text-[14px] font-semibold">Chống nắng</th>
+                </tr>
+              </thead>
+              <tbody class="text-[14px] text-muted dark:text-muted-invert">
+                <tr class="border-b border-line dark:border-line-invert">
+                  <th class="p-4 font-medium text-ink dark:text-ink-invert">
+                    Mục đích chính
+                  </th>
+                  <td class="p-4">Chăm sóc da dầu</td>
+                  <td class="p-4">Bổ sung độ ẩm</td>
+                  <td class="p-4">Chu trình ban ngày</td>
+                </tr>
+                <tr class="border-b border-line dark:border-line-invert">
+                  <th class="p-4 font-medium text-ink dark:text-ink-invert">
+                    Kết cấu
+                  </th>
+                  <td class="p-4">Nhẹ</td>
+                  <td class="p-4">Mềm mịn</td>
+                  <td class="p-4">Nhẹ, dễ dùng</td>
+                </tr>
+                <tr class="border-b border-line dark:border-line-invert">
+                  <th class="p-4 font-medium text-ink dark:text-ink-invert">
+                    Dùng hằng ngày
+                  </th>
+                  <td class="p-4">Có</td>
+                  <td class="p-4">Có</td>
+                  <td class="p-4">Có</td>
+                </tr>
+                <tr>
+                  <th class="p-4 font-medium text-ink dark:text-ink-invert">
+                    Giá tham khảo
+                  </th>
+                  <td class="p-4">299.000đ</td>
+                  <td class="p-4">690.000đ</td>
+                  <td class="p-4">450.000đ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="surface py-16 lg:py-24"
+        aria-labelledby="payment-faq-title"
+      >
+        <div class="mx-auto w-full max-w-[820px] px-5">
+          <div class="text-center">
+            <p class="eyebrow">Thanh toán</p>
+            <h2
+              id="payment-faq-title"
+              class="mt-2 font-display text-[30px] font-extrabold leading-[38px] lg:text-[36px]"
+            >
+              Câu hỏi về giá và thanh toán
+            </h2>
+          </div>
+          <div class="mt-10">
+            <details
+              class="border-b border-line py-5 dark:border-line-invert"
+              open
+            >
+              <summary class="cursor-pointer text-[17px] font-semibold">
+                Giá trên trang đã bao gồm phí giao hàng chưa?
+              </summary>
+              <p
+                class="mt-3 text-[15px] leading-[26px] text-muted dark:text-muted-invert"
+              >
+                Giá hiển thị là giá tham khảo của sản phẩm. Phí giao hàng có thể
+                thay đổi tùy khu vực và sẽ được thông báo trước khi xác nhận
+                đơn.
+              </p>
+            </details>
+            <details class="border-b border-line py-5 dark:border-line-invert">
+              <summary class="cursor-pointer text-[17px] font-semibold">
+                Annie hỗ trợ những hình thức thanh toán nào?
+              </summary>
+              <p
+                class="mt-3 text-[15px] leading-[26px] text-muted dark:text-muted-invert"
+              >
+                Bạn có thể tham khảo hình thức thanh toán phù hợp khi liên hệ tư
+                vấn hoặc trước bước xác nhận đơn hàng.
+              </p>
+            </details>
+            <details class="border-b border-line py-5 dark:border-line-invert">
+              <summary class="cursor-pointer text-[17px] font-semibold">
+                Tôi có thể đổi lựa chọn sau khi được tư vấn không?
+              </summary>
+              <p
+                class="mt-3 text-[15px] leading-[26px] text-muted dark:text-muted-invert"
+              >
+                Có. Bạn có thể trao đổi lại nhu cầu để được gợi ý lựa chọn phù
+                hợp hơn trước khi xác nhận mua.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="surface-soft py-16 lg:py-20">
+        <div class="mx-auto max-w-[760px] px-5 text-center">
+          <h2
+            class="font-display text-[30px] font-extrabold leading-[38px] lg:text-[36px]"
+          >
+            Chưa biết nên chọn sản phẩm nào?
+          </h2>
+          <p
+            class="mt-4 text-[16px] leading-[26px] text-muted dark:text-muted-invert"
+          >
+            Gửi nhu cầu của bạn để Annie hỗ trợ gợi ý lựa chọn phù hợp.
+          </p>
+          <a href="contact.html" class="btn btn-primary mt-7 px-5 py-3"
+            >Liên hệ tư vấn</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer
+      class="min-h-[537px] bg-white dark:bg-surface-dark py-14 lg:py-[66px]"
+    >
+      <div
+        class="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-10 px-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-[60px] xl:px-0"
+      >
+        <nav aria-labelledby="footer-company-title">
+          <h2
+            id="footer-company-title"
+            class="text-[14px] font-bold uppercase tracking-wide text-ink dark:text-ink-invert"
+          >
+            Annie
+          </h2>
+          <ul
+            class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
+          >
+            <li>
+              <a href="index.html#hero" class="hover:text-brand-500"
+                >Giới thiệu</a
+              >
+            </li>
+            <li>
+              <a href="index.html#brands" class="hover:text-brand-500"
+                >Thương hiệu</a
+              >
+            </li>
+            <li>
+              <a href="pricing.html" class="hover:text-brand-500">Đánh giá</a>
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-brand-500">Liên hệ</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-support-title">
+          <h2
+            id="footer-support-title"
+            class="text-[14px] font-bold uppercase tracking-wide text-ink dark:text-ink-invert"
+          >
+            Hỗ trợ
+          </h2>
+          <ul
+            class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
+          >
+            <li>
+              <a href="contact.html" class="hover:text-brand-500"
+                >Câu hỏi thường gặp</a
+              >
+            </li>
+            <li><a href="#" class="hover:text-brand-500">Giao hàng</a></li>
+            <li><a href="#" class="hover:text-brand-500">Đổi trả</a></li>
+            <li><a href="#" class="hover:text-brand-500">Tư vấn</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-shop-title">
+          <h2
+            id="footer-shop-title"
+            class="text-[14px] font-bold uppercase tracking-wide text-ink dark:text-ink-invert"
+          >
+            Mua sắm
+          </h2>
+          <ul
+            class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
+          >
+            <li>
+              <a href="index.html#features-one" class="hover:text-brand-500"
+                >Chăm sóc da</a
+              >
+            </li>
+            <li>
+              <a href="index.html#features-two" class="hover:text-brand-500"
+                >Trang điểm</a
+              >
+            </li>
+            <li>
+              <a href="pricing.html" class="hover:text-brand-500">Nổi bật</a>
+            </li>
+            <li>
+              <a href="index.html#brands" class="hover:text-brand-500"
+                >Thương hiệu</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-policy-title">
+          <h2
+            id="footer-policy-title"
+            class="text-[14px] font-bold uppercase tracking-wide text-ink dark:text-ink-invert"
+          >
+            Chính sách
+          </h2>
+          <ul
+            class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
+          >
+            <li><a href="#" class="hover:text-brand-500">Bảo mật</a></li>
+            <li><a href="#" class="hover:text-brand-500">Điều khoản</a></li>
+            <li><a href="#" class="hover:text-brand-500">Thanh toán</a></li>
+            <li><a href="#" class="hover:text-brand-500">Vận chuyển</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-contact-title">
+          <h2
+            id="footer-contact-title"
+            class="text-[14px] font-bold uppercase tracking-wide text-ink dark:text-ink-invert"
+          >
+            Liên hệ
+          </h2>
+          <ul
+            class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
+          >
+            <li>TP. Hồ Chí Minh</li>
+            <li>
+              <a href="mailto:support@annie.vn" class="hover:text-brand-500"
+                >support@annie.vn</a
+              >
+            </li>
+            <li>
+              <a href="tel:0123456789" class="hover:text-brand-500"
+                >0123 456 789</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div
+        class="mx-auto mt-16 flex w-full max-w-[1280px] flex-col items-center gap-[16px] px-5 text-center lg:mt-[105px] xl:px-0"
+      >
+        <a
+          href="index.html#hero"
+          class="flex items-center gap-[10px] lg:translate-x-[-20px]"
+          aria-label="Annie - Trang chủ"
+        >
+          <img
+            src="./assets/img/logo.svg"
+            alt=""
+            class="h-[32.62px] w-[29.76px] object-contain"
+          />
+          <span
+            class="font-display text-[24px] font-bold text-ink dark:text-ink-invert"
+            >Annie</span
+          >
+        </a>
+        <p class="mt-[5px] text-[16px] text-muted dark:text-muted-invert">
+          © 2026 Annie. All rights reserved.
+        </p>
+        <div class="mx-auto mt-[5px] flex items-center justify-center">
+          <img
+            src="./assets/img/Social_Links.svg"
+            alt=""
+            class="h-[24px] w-[156px] object-contain"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
