@@ -23,15 +23,13 @@ Website giới thiệu các sản phẩm chăm sóc da, trang điểm và làm �
 - Bảng so sánh có thể cuộn ngang trên mobile
 - Form hỗ trợ keyboard focus và accessibility
 
-## Demo
-
-Public URL: `Sẽ cập nhật sau khi deploy`
+Public URL:(https://vananh1609.github.io/tkw_2354050003_vananh/)
 
 ## So sánh Figma và Website
 
-| Figma sau khi cập nhật              | Website sau khi hoàn thiện              |
-| ----------------------------------- | --------------------------------------- |
-| ![Figma](./assets/readme/figma.png) | ![Website](./assets/readme/website.png) |
+| Figma sau khi cập nhật           | Website sau khi hoàn thiện           |
+| -------------------------------- | ------------------------------------ |
+| ![Figma](./assets/img/figma.png) | ![Website](./assets/img/website.png) |
 
 ## Nếu có thêm thời gian
 
