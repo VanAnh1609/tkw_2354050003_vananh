@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi" class="scroll-smooth">
+<html lang="vi" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
 
-  <body class="overflow-x-hidden bg-surface font-body text-ink antialiased">
+  <body
+    class="overflow-x-hidden bg-surface dark:bg-surface-dark font-body text-ink dark:text-ink-invert antialiased"
+  >
     <a
       href="#main-content"
       class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-brand-500 focus:p-4 focus:text-white"
@@ -27,7 +29,9 @@
     <!-- ==================================================
          HEADER / NAVBAR
     ================================================== -->
-    <header class="w-full border-b border-line bg-surface">
+    <header
+      class="w-full border-b border-line dark:border-line-invert bg-surface dark:bg-surface-dark"
+    >
       <nav
         class="mx-auto flex w-full items-center justify-between px-5 py-4 lg:h-[85px] lg:max-w-[1280px] lg:px-0 lg:py-[24px]"
         aria-label="Điều hướng chính"
@@ -44,7 +48,7 @@
               class="h-[28px] w-[26px] shrink-0 object-contain lg:h-[32.62px] lg:w-[29.76px]"
             />
             <span
-              class="font-display text-[20px] font-semibold leading-[150%] tracking-tight text-ink lg:text-[24px]"
+              class="font-display text-[20px] font-semibold leading-[150%] tracking-tight text-ink dark:text-ink-invert lg:text-[24px]"
             >
               Annie
             </span>
@@ -54,35 +58,35 @@
             <li>
               <a
                 href="#hero"
-                class="font-body text-[16px] font-medium text-ink hover:text-brand-500"
+                class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
                 >Trang chủ</a
               >
             </li>
             <li>
               <a
                 href="#features"
-                class="font-body text-[16px] font-medium text-ink hover:text-brand-500"
+                class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
                 >Sản phẩm</a
               >
             </li>
             <li>
               <a
                 href="#brands"
-                class="font-body text-[16px] font-medium text-ink hover:text-brand-500"
+                class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
                 >Thương hiệu</a
               >
             </li>
             <li>
               <a
                 href="#testimonials"
-                class="font-body text-[16px] font-medium text-ink hover:text-brand-500"
+                class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
                 >Đánh giá</a
               >
             </li>
             <li>
               <a
                 href="#faq"
-                class="font-body text-[16px] font-medium text-ink hover:text-brand-500"
+                class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
                 >Hỏi đáp</a
               >
             </li>
@@ -92,7 +96,7 @@
         <div class="hidden items-center gap-[16px] lg:flex">
           <a
             href="#login"
-            class="font-body text-[14px] font-medium text-ink hover:text-brand-500"
+            class="font-body text-[14px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
             >Đăng nhập</a
           >
           <a
@@ -104,7 +108,7 @@
 
         <button
           type="button"
-          class="flex h-10 w-10 items-center justify-center rounded-card text-ink lg:hidden"
+          class="flex h-10 w-10 items-center justify-center rounded-card text-ink dark:text-ink-invert lg:hidden"
           aria-label="Mở menu"
         >
           <svg
@@ -131,7 +135,7 @@
       ================================================== -->
       <section
         id="hero"
-        class="w-full bg-surface py-10 lg:py-[64px]"
+        class="w-full bg-surface dark:bg-surface-dark py-10 lg:py-[64px]"
         aria-labelledby="hero-title"
       >
         <div
@@ -145,7 +149,7 @@
             >
               <h1
                 id="hero-title"
-                class="font-display text-[36px] font-extrabold leading-[40px] tracking-[-0.03em] text-ink sm:text-[44px] sm:leading-[48px] lg:text-[52px] lg:leading-[56px]"
+                class="font-display text-[36px] font-extrabold leading-[40px] tracking-[-0.03em] text-ink dark:text-ink-invert sm:text-[44px] sm:leading-[48px] lg:text-[52px] lg:leading-[56px]"
               >
                 Nâng niu làn da
                 <br />
@@ -153,7 +157,7 @@
               </h1>
 
               <p
-                class="font-body text-[16px] leading-[150%] text-muted lg:text-[18px]"
+                class="font-body text-[16px] leading-[150%] text-muted dark:text-muted-invert lg:text-[18px]"
               >
                 Khám phá các sản phẩm chăm sóc da, trang điểm và làm đẹp chính
                 hãng từ những thương hiệu được yêu thích.
@@ -189,7 +193,7 @@
       ================================================== -->
       <section
         id="brands"
-        class="w-full bg-surface pb-16 lg:pb-[96px]"
+        class="w-full bg-surface dark:bg-surface-dark pb-16 lg:pb-[96px]"
         aria-labelledby="brands-title"
       >
         <div class="mx-auto w-full max-w-[1280px] px-5 xl:px-0">
@@ -204,14 +208,14 @@
               <img
                 src="./assets/img/loreal.svg"
                 alt="L'Oréal"
-                class="max-h-[42px] max-w-[120px] object-contain"
+                class="max-h-[42px] max-w-[120px] object-contain dark:brightness-0 dark:invert"
               />
             </li>
             <li class="flex h-[52px] items-center justify-center">
               <img
                 src="./assets/img/maybelline.svg"
                 alt="Maybelline"
-                class="max-h-[42px] max-w-[120px] object-contain"
+                class="max-h-[42px] max-w-[120px] object-contain dark:brightness-0 dark:invert"
               />
             </li>
             <li class="flex h-[52px] items-center justify-center">
@@ -251,7 +255,7 @@
       ================================================== -->
       <section
         id="features"
-        class="w-full bg-brand-50 py-16 lg:py-[96px]"
+        class="w-full bg-brand-50 dark:bg-surface-dark-alt py-16 lg:py-[96px]"
         aria-labelledby="features-title"
       >
         <div
@@ -269,13 +273,13 @@
               >
                 <h2
                   id="features-title"
-                  class="font-display text-[28px] font-extrabold leading-[36px] tracking-[-0.02em] text-ink lg:text-[30px] lg:leading-[38px]"
+                  class="font-display text-[28px] font-extrabold leading-[36px] tracking-[-0.02em] text-ink dark:text-ink-invert lg:text-[30px] lg:leading-[38px]"
                 >
                   Chăm sóc sắc đẹp theo cách của bạn
                 </h2>
 
                 <p
-                  class="font-body text-[16px] leading-[28px] text-muted lg:h-[90px] lg:text-[18px] lg:leading-[30px]"
+                  class="font-body text-[16px] leading-[28px] text-muted dark:text-muted-invert lg:h-[90px] lg:text-[18px] lg:leading-[30px]"
                 >
                   Annie mang đến trải nghiệm mua sắm mỹ phẩm dễ dàng với thông
                   tin rõ ràng, sản phẩm đa dạng và những lựa chọn phù hợp cho
@@ -305,7 +309,8 @@
                           clip-rule="evenodd"
                         />
                       </svg>
-                      <span class="font-body text-[15px] font-medium text-ink"
+                      <span
+                        class="font-body text-[15px] font-medium text-ink dark:text-ink-invert"
                         >Sản phẩm từ nhiều thương hiệu được yêu thích</span
                       >
                     </li>
@@ -323,7 +328,8 @@
                           clip-rule="evenodd"
                         />
                       </svg>
-                      <span class="font-body text-[15px] font-medium text-ink"
+                      <span
+                        class="font-body text-[15px] font-medium text-ink dark:text-ink-invert"
                         >Thông tin sản phẩm rõ ràng và dễ tham khảo</span
                       >
                     </li>
@@ -341,14 +347,15 @@
                           clip-rule="evenodd"
                         />
                       </svg>
-                      <span class="font-body text-[15px] font-medium text-ink"
+                      <span
+                        class="font-body text-[15px] font-medium text-ink dark:text-ink-invert"
                         >Dễ dàng tìm sản phẩm phù hợp với từng nhu cầu</span
                       >
                     </li>
                   </ul>
 
                   <p
-                    class="font-body text-[16px] leading-[28px] text-muted lg:h-[60px] lg:text-[18px] lg:leading-[30px]"
+                    class="font-body text-[16px] leading-[28px] text-muted dark:text-muted-invert lg:h-[60px] lg:text-[18px] lg:leading-[30px]"
                   >
                     Annie giúp việc xây dựng chu trình làm đẹp mỗi ngày trở nên
                     đơn giản và thuận tiện hơn.
@@ -389,13 +396,13 @@
                 class="flex w-full flex-col items-start gap-[16px] lg:h-[151px] lg:w-[608px]"
               >
                 <h3
-                  class="font-display text-[28px] font-extrabold leading-[36px] tracking-[-0.02em] text-ink lg:text-[30px] lg:leading-[38px]"
+                  class="font-display text-[28px] font-extrabold leading-[36px] tracking-[-0.02em] text-ink dark:text-ink-invert lg:text-[30px] lg:leading-[38px]"
                 >
                   Khám phá vẻ đẹp phù hợp với bạn
                 </h3>
 
                 <p
-                  class="font-body text-[16px] leading-[28px] text-muted lg:h-[90px] lg:text-[18px] lg:leading-[30px]"
+                  class="font-body text-[16px] leading-[28px] text-muted dark:text-muted-invert lg:h-[90px] lg:text-[18px] lg:leading-[30px]"
                 >
                   Mỗi làn da có một nhu cầu riêng. Annie giúp bạn khám phá sản
                   phẩm phù hợp từ chăm sóc da đến trang điểm một cách dễ dàng và
@@ -424,7 +431,8 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span class="font-body text-[15px] font-medium text-ink"
+                    <span
+                      class="font-body text-[15px] font-medium text-ink dark:text-ink-invert"
                       >Đa dạng sản phẩm chăm sóc da và trang điểm</span
                     >
                   </li>
@@ -442,7 +450,8 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span class="font-body text-[15px] font-medium text-ink"
+                    <span
+                      class="font-body text-[15px] font-medium text-ink dark:text-ink-invert"
                       >Lựa chọn theo thương hiệu và nhu cầu cá nhân</span
                     >
                   </li>
@@ -460,7 +469,8 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span class="font-body text-[15px] font-medium text-ink"
+                    <span
+                      class="font-body text-[15px] font-medium text-ink dark:text-ink-invert"
                       >Lưu sản phẩm yêu thích để dễ dàng xem lại</span
                     >
                   </li>
@@ -478,7 +488,8 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span class="font-body text-[15px] font-medium text-ink"
+                    <span
+                      class="font-body text-[15px] font-medium text-ink dark:text-ink-invert"
                       >Thông tin giá bán và công dụng được trình bày rõ
                       ràng</span
                     >
@@ -497,7 +508,8 @@
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span class="font-body text-[15px] font-medium text-ink"
+                    <span
+                      class="font-body text-[15px] font-medium text-ink dark:text-ink-invert"
                       >Hỗ trợ xây dựng chu trình làm đẹp phù hợp</span
                     >
                   </li>
@@ -512,7 +524,7 @@
       ========================== -->
       <section
         id="statistics"
-        class="bg-white py-16 lg:py-24"
+        class="bg-white dark:bg-surface-dark py-16 lg:py-24"
         aria-labelledby="statistics-title"
       >
         <div
@@ -527,13 +539,13 @@
 
             <h2
               id="statistics-title"
-              class="mt-[10px] font-display text-[30px] font-extrabold leading-[36px] tracking-[-0.02em] text-ink lg:-translate-y-[25px] lg:text-[36px] lg:leading-[40px]"
+              class="mt-[10px] font-display text-[30px] font-extrabold leading-[36px] tracking-[-0.02em] text-ink dark:text-ink-invert lg:-translate-y-[25px] lg:text-[36px] lg:leading-[40px]"
             >
               Đồng hành cùng hàng nghìn tín đồ làm đẹp
             </h2>
 
             <p
-              class="mt-[10px] text-[16px] leading-[26px] text-muted lg:-translate-y-[5px] lg:text-[20px] lg:leading-[25px]"
+              class="mt-[10px] text-[16px] leading-[26px] text-muted dark:text-muted-invert lg:-translate-y-[5px] lg:text-[20px] lg:leading-[25px]"
             >
               Annie xây dựng trải nghiệm mua sắm đơn giản, rõ ràng và thuận tiện
               để bạn dễ dàng tìm được sản phẩm phù hợp.
@@ -567,12 +579,12 @@
                 class="mb-[10px] h-[48px] w-[48px]"
               />
               <dd
-                class="font-display text-[24px] font-extrabold leading-none text-ink"
+                class="font-display text-[24px] font-extrabold leading-none text-ink dark:text-ink-invert"
               >
                 1.000+
               </dd>
               <dt
-                class="mt-[8px] max-w-[170px] text-[16px] leading-[26px] text-muted"
+                class="mt-[8px] max-w-[170px] text-[16px] leading-[26px] text-muted dark:text-muted-invert"
               >
                 sản phẩm chăm sóc<br />
                 và làm đẹp
@@ -586,12 +598,12 @@
                 class="mb-[10px] h-[48px] w-[48px]"
               />
               <dd
-                class="font-display text-[24px] font-extrabold leading-none text-ink"
+                class="font-display text-[24px] font-extrabold leading-none text-ink dark:text-ink-invert"
               >
                 50+
               </dd>
               <dt
-                class="mt-[8px] max-w-[170px] text-[16px] leading-[26px] text-muted"
+                class="mt-[8px] max-w-[170px] text-[16px] leading-[26px] text-muted dark:text-muted-invert"
               >
                 thương hiệu được<br />
                 yêu thích
@@ -605,12 +617,12 @@
                 class="mb-[10px] h-[48px] w-[48px]"
               />
               <dd
-                class="font-display text-[24px] font-extrabold leading-none text-ink"
+                class="font-display text-[24px] font-extrabold leading-none text-ink dark:text-ink-invert"
               >
                 10K+
               </dd>
               <dt
-                class="mt-[8px] max-w-[170px] text-[16px] leading-[26px] text-muted"
+                class="mt-[8px] max-w-[170px] text-[16px] leading-[26px] text-muted dark:text-muted-invert"
               >
                 khách hàng đã<br />
                 mua sắm
@@ -624,12 +636,12 @@
                 class="mb-[10px] h-[48px] w-[48px]"
               />
               <dd
-                class="font-display text-[24px] font-extrabold leading-none text-ink"
+                class="font-display text-[24px] font-extrabold leading-none text-ink dark:text-ink-invert"
               >
                 98%
               </dd>
               <dt
-                class="mt-[8px] max-w-[170px] text-[16px] leading-[26px] text-muted"
+                class="mt-[8px] max-w-[170px] text-[16px] leading-[26px] text-muted dark:text-muted-invert"
               >
                 đánh giá tích cực từ<br />
                 khách hàng
@@ -643,7 +655,7 @@
       ========================== -->
       <section
         id="testimonials"
-        class="bg-brand-50 py-16 lg:py-[86px]"
+        class="bg-brand-50 dark:bg-surface-dark-alt py-16 lg:py-[86px]"
         aria-labelledby="testimonials-title"
       >
         <h2 id="testimonials-title" class="sr-only">Đánh giá của khách hàng</h2>
@@ -651,7 +663,7 @@
         <div class="mx-auto w-full max-w-[900px] px-5 text-center">
           <figure class="flex flex-col items-center">
             <div
-              class="relative top-[20px] font-display text-[100px] font-extrabold leading-[60px] text-muted/40"
+              class="relative top-[20px] font-display text-[100px] font-extrabold leading-[60px] text-muted dark:text-muted-invert/40"
               aria-hidden="true"
             >
               “
@@ -659,7 +671,7 @@
 
             <blockquote class="mt-[20px]">
               <p
-                class="h-auto w-full max-w-[768px] font-display text-[20px] font-semibold leading-[32px] text-ink lg:h-[117px] lg:text-[24px] lg:leading-[37px]"
+                class="h-auto w-full max-w-[768px] font-display text-[20px] font-semibold leading-[32px] text-ink dark:text-ink-invert lg:h-[117px] lg:text-[24px] lg:leading-[37px]"
               >
                 <span class="block lg:mx-[5px]">
                   “Annie giúp mình tìm sản phẩm nhanh hơn rất nhiều.Thông
@@ -685,11 +697,15 @@
                 M
               </span>
 
-              <cite class="text-[16px] font-semibold not-italic text-ink">
+              <cite
+                class="text-[16px] font-semibold not-italic text-ink dark:text-ink-invert"
+              >
                 Minh Anh /
               </cite>
 
-              <span class="text-[14px] text-muted"> Khách hàng của Annie </span>
+              <span class="text-[14px] text-muted dark:text-muted-invert">
+                Khách hàng của Annie
+              </span>
             </figcaption>
           </figure>
         </div>
@@ -699,20 +715,20 @@
       ========================== -->
       <section
         id="pricing"
-        class="bg-white py-16 lg:py-[96px]"
+        class="bg-white dark:bg-surface-dark py-16 lg:py-[96px]"
         aria-labelledby="pricing-title"
       >
         <div class="mx-auto w-full max-w-[1280px] px-5 xl:px-0">
           <div class="mx-auto max-w-[720px] text-center">
             <h2
               id="pricing-title"
-              class="font-display text-[30px] font-extrabold leading-[36px] text-ink lg:relative lg:top-[10px] lg:text-[36px] lg:leading-[40px]"
+              class="font-display text-[30px] font-extrabold leading-[36px] text-ink dark:text-ink-invert lg:relative lg:top-[10px] lg:text-[36px] lg:leading-[40px]"
             >
               Sản phẩm nổi bật dành cho bạn
             </h2>
 
             <p
-              class="mt-5 text-[16px] leading-[26px] text-muted lg:mt-[30px] lg:text-[20px] lg:leading-[25px]"
+              class="mt-5 text-[16px] leading-[26px] text-muted dark:text-muted-invert lg:mt-[30px] lg:text-[20px] lg:leading-[25px]"
             >
               Ba lựa chọn phổ biến cho chu trình chăm sóc da hằng ngày.
             </p>
@@ -722,26 +738,27 @@
             class="mt-12 grid items-stretch gap-6 sm:grid-cols-2 lg:mt-[80px] lg:grid-cols-3 lg:gap-[40px]"
           >
             <li
-              class="flex w-full flex-col rounded-[8px] border border-line bg-white p-6 lg:min-h-[559px] lg:p-[28px]"
+              class="flex w-full flex-col rounded-[8px] border border-line dark:border-line-invert bg-white dark:bg-surface-dark-alt p-6 lg:min-h-[559px] lg:p-[28px]"
             >
               <h3
-                class="relative top-[5px] text-center font-display text-[24px] font-semibold text-ink"
+                class="relative top-[5px] text-center font-display text-[24px] font-semibold text-ink dark:text-ink-invert"
               >
                 Serum dưỡng da
               </h3>
               <p
-                class="mt-[25px] text-center text-[18px] leading-[25px] text-muted"
+                class="mt-[25px] text-center text-[18px] leading-[25px] text-muted dark:text-muted-invert"
               >
                 Phù hợp với chu trình chăm sóc da dầu và da hỗn hợp.
               </p>
               <div class="mt-[30px] text-center">
-                <span class="font-display text-[36px] font-extrabold text-ink"
+                <span
+                  class="font-display text-[36px] font-extrabold text-ink dark:text-ink-invert"
                   >299.000đ</span
                 >
               </div>
 
               <ul
-                class="mt-[28px] mb-[32px] flex flex-col gap-[16px] text-[16px] text-muted"
+                class="mt-[28px] mb-[32px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
               >
                 <li class="flex min-h-[28px] w-full items-center gap-[10px]">
                   <span class="text-brand-500" aria-hidden="true">✓</span>
@@ -777,26 +794,27 @@
             </li>
 
             <li
-              class="flex h-full w-full flex-col rounded-[8px] border border-line bg-white p-6 lg:p-[28px]"
+              class="flex h-full w-full flex-col rounded-[8px] border border-line dark:border-line-invert bg-white dark:bg-surface-dark-alt p-6 lg:p-[28px]"
             >
               <h3
-                class="relative top-[5px] text-center font-display text-[24px] font-semibold text-ink"
+                class="relative top-[5px] text-center font-display text-[24px] font-semibold text-ink dark:text-ink-invert"
               >
                 Kem dưỡng ẩm
               </h3>
               <p
-                class="mt-[25px] text-center text-[18px] leading-[25px] text-muted"
+                class="mt-[25px] text-center text-[18px] leading-[25px] text-muted dark:text-muted-invert"
               >
                 Lựa chọn dịu nhẹ để bổ sung độ ẩm cho làn da mỗi ngày.
               </p>
               <div class="mt-[30px] text-center">
-                <span class="font-display text-[36px] font-extrabold text-ink"
+                <span
+                  class="font-display text-[36px] font-extrabold text-ink dark:text-ink-invert"
                   >690.000đ</span
                 >
               </div>
 
               <ul
-                class="mt-[28px] mb-[32px] flex flex-col gap-[16px] text-[16px] text-muted"
+                class="mt-[28px] mb-[32px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
               >
                 <li class="flex min-h-[28px] w-full items-center gap-[10px]">
                   <span class="text-brand-500" aria-hidden="true">✓</span>
@@ -833,26 +851,27 @@
             </li>
 
             <li
-              class="flex h-full w-full flex-col rounded-[8px] border border-line bg-white p-6 lg:p-[28px]"
+              class="flex h-full w-full flex-col rounded-[8px] border border-line dark:border-line-invert bg-white dark:bg-surface-dark-alt p-6 lg:p-[28px]"
             >
               <h3
-                class="relative top-[5px] text-center font-display text-[24px] font-semibold text-ink"
+                class="relative top-[5px] text-center font-display text-[24px] font-semibold text-ink dark:text-ink-invert"
               >
                 Kem chống nắng
               </h3>
               <p
-                class="mt-[25px] text-center text-[18px] leading-[25px] text-muted"
+                class="mt-[25px] text-center text-[18px] leading-[25px] text-muted dark:text-muted-invert"
               >
                 Lựa chọn tiện lợi cho bước chăm sóc da vào ban ngày.
               </p>
               <div class="mt-[30px] text-center">
-                <span class="font-display text-[36px] font-extrabold text-ink"
+                <span
+                  class="font-display text-[36px] font-extrabold text-ink dark:text-ink-invert"
                   >450.000đ</span
                 >
               </div>
 
               <ul
-                class="mt-[28px] mb-[32px] flex flex-col gap-[16px] text-[16px] text-muted"
+                class="mt-[28px] mb-[32px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
               >
                 <li class="flex min-h-[28px] w-full items-center gap-[10px]">
                   <span class="text-brand-500" aria-hidden="true">✓</span>
@@ -895,27 +914,32 @@
       ========================== -->
       <section
         id="faq"
-        class="bg-white pb-16 lg:pb-[98px]"
+        class="bg-white dark:bg-surface-dark pb-16 lg:pb-[98px]"
         aria-labelledby="faq-title"
       >
         <div class="mx-auto w-full max-w-[760px] px-5">
           <h2
             id="faq-title"
-            class="text-center font-display text-[30px] font-extrabold leading-[36px] text-ink lg:relative lg:top-[10px] lg:text-[36px] lg:leading-[38px]"
+            class="text-center font-display text-[30px] font-extrabold leading-[36px] text-ink dark:text-ink-invert lg:relative lg:top-[10px] lg:text-[36px] lg:leading-[38px]"
           >
             Câu hỏi thường gặp
           </h2>
 
           <div class="mt-[50px]">
-            <details class="border-b border-line py-[18px]" open>
+            <details
+              class="border-b border-line dark:border-line-invert py-[18px]"
+              open
+            >
               <summary
-                class="cursor-pointer list-none text-[18px] font-semibold text-ink"
+                class="cursor-pointer list-none text-[18px] font-semibold text-ink dark:text-ink-invert"
               >
                 Sản phẩm tại Annie có thông tin thương hiệu rõ ràng không?
               </summary>
-              <div class="mt-[17px] border-t border-line pt-[14px]"></div>
+              <div
+                class="mt-[17px] border-t border-line dark:border-line-invert pt-[14px]"
+              ></div>
               <p
-                class="mt-[10px] pl-[10px] text-[16px] leading-[25px] text-muted"
+                class="mt-[10px] pl-[10px] text-[16px] leading-[25px] text-muted dark:text-muted-invert"
               >
                 Có. Mỗi sản phẩm tại Annie đều được trình bày rõ ràng với tên
                 thương hiệu, mô tả, công dụng và những thông tin cần thiết để
@@ -924,7 +948,7 @@
               </p>
 
               <p
-                class="mt-[12px] pl-[10px] text-[16px] leading-[25px] text-muted"
+                class="mt-[12px] pl-[10px] text-[16px] leading-[25px] text-muted dark:text-muted-invert"
               >
                 Ngoài ra, Annie còn cung cấp thông tin chi tiết về sản phẩm để
                 bạn có thể dễ dàng so sánh các lựa chọn và tìm được sản phẩm phù
@@ -932,37 +956,49 @@
               </p>
             </details>
 
-            <details class="border-b border-line py-[18px]">
+            <details
+              class="border-b border-line dark:border-line-invert py-[18px]"
+            >
               <summary
-                class="cursor-pointer list-none text-[18px] font-semibold text-ink"
+                class="cursor-pointer list-none text-[18px] font-semibold text-ink dark:text-ink-invert"
               >
                 Tôi có thể lưu sản phẩm yêu thích để xem lại không?
               </summary>
-              <p class="pt-[14px] text-[16px] leading-[20px] text-muted">
+              <p
+                class="pt-[14px] text-[16px] leading-[20px] text-muted dark:text-muted-invert"
+              >
                 Có. Bạn có thể lưu các sản phẩm quan tâm để dễ dàng xem lại và
                 so sánh.
               </p>
             </details>
 
-            <details class="border-b border-line py-[18px]">
+            <details
+              class="border-b border-line dark:border-line-invert py-[18px]"
+            >
               <summary
-                class="cursor-pointer list-none text-[18px] font-semibold text-ink"
+                class="cursor-pointer list-none text-[18px] font-semibold text-ink dark:text-ink-invert"
               >
                 Annie có hỗ trợ lựa chọn sản phẩm không?
               </summary>
-              <p class="pt-[14px] text-[16px] leading-[20px] text-muted">
+              <p
+                class="pt-[14px] text-[16px] leading-[20px] text-muted dark:text-muted-invert"
+              >
                 Annie cung cấp thông tin rõ ràng giúp bạn tham khảo và lựa chọn
                 sản phẩm phù hợp với nhu cầu chăm sóc.
               </p>
             </details>
 
-            <details class="border-b border-line py-[18px]">
+            <details
+              class="border-b border-line dark:border-line-invert py-[18px]"
+            >
               <summary
-                class="cursor-pointer list-none text-[18px] font-semibold text-ink"
+                class="cursor-pointer list-none text-[18px] font-semibold text-ink dark:text-ink-invert"
               >
                 Tôi có thể xem sản phẩm theo thương hiệu không?
               </summary>
-              <p class="pt-[14px] text-[16px] leading-[20px] text-muted">
+              <p
+                class="pt-[14px] text-[16px] leading-[20px] text-muted dark:text-muted-invert"
+              >
                 Có. Bạn có thể khám phá sản phẩm theo từng thương hiệu và nhóm
                 sản phẩm.
               </p>
@@ -976,19 +1012,19 @@
       ========================== -->
       <section
         id="cta"
-        class="bg-brand-50 py-16 lg:py-[90px]"
+        class="bg-brand-50 dark:bg-surface-dark-alt py-16 lg:py-[90px]"
         aria-labelledby="cta-title"
       >
         <div class="mx-auto max-w-[760px] px-5 text-center">
           <h2
             id="cta-title"
-            class="mt-[12px] font-display text-[30px] font-extrabold leading-[36px] text-ink lg:text-[36px] lg:leading-[38px]"
+            class="mt-[12px] font-display text-[30px] font-extrabold leading-[36px] text-ink dark:text-ink-invert lg:text-[36px] lg:leading-[38px]"
           >
             Bắt đầu hành trình làm đẹp của bạn
           </h2>
 
           <p
-            class="mt-5 text-[16px] leading-[26px] text-muted lg:mt-[30px] lg:text-[20px] lg:leading-[24px]"
+            class="mt-5 text-[16px] leading-[26px] text-muted dark:text-muted-invert lg:mt-[30px] lg:text-[20px] lg:leading-[24px]"
           >
             Khám phá những sản phẩm chăm sóc da và trang điểm phù hợp với bạn.
           </p>
@@ -1006,18 +1042,22 @@
     <!-- =========================
          FOOTER
     ========================== -->
-    <footer class="min-h-[537px] bg-white py-14 lg:py-[66px]">
+    <footer
+      class="min-h-[537px] bg-white dark:bg-surface-dark py-14 lg:py-[66px]"
+    >
       <div
         class="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-10 px-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-[60px] xl:px-0"
       >
         <nav aria-labelledby="footer-company-title">
           <h2
             id="footer-company-title"
-            class="text-[14px] font-bold uppercase tracking-wide text-ink"
+            class="text-[14px] font-bold uppercase tracking-wide text-ink dark:text-ink-invert"
           >
             Annie
           </h2>
-          <ul class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted">
+          <ul
+            class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
+          >
             <li><a href="#hero" class="hover:text-brand-500">Giới thiệu</a></li>
             <li>
               <a href="#brands" class="hover:text-brand-500">Thương hiệu</a>
@@ -1032,11 +1072,13 @@
         <nav aria-labelledby="footer-support-title">
           <h2
             id="footer-support-title"
-            class="text-[14px] font-bold uppercase tracking-wide text-ink"
+            class="text-[14px] font-bold uppercase tracking-wide text-ink dark:text-ink-invert"
           >
             Hỗ trợ
           </h2>
-          <ul class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted">
+          <ul
+            class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
+          >
             <li>
               <a href="#faq" class="hover:text-brand-500">Câu hỏi thường gặp</a>
             </li>
@@ -1049,11 +1091,13 @@
         <nav aria-labelledby="footer-shop-title">
           <h2
             id="footer-shop-title"
-            class="text-[14px] font-bold uppercase tracking-wide text-ink"
+            class="text-[14px] font-bold uppercase tracking-wide text-ink dark:text-ink-invert"
           >
             Mua sắm
           </h2>
-          <ul class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted">
+          <ul
+            class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
+          >
             <li>
               <a href="#features-one" class="hover:text-brand-500"
                 >Chăm sóc da</a
@@ -1074,11 +1118,13 @@
         <nav aria-labelledby="footer-policy-title">
           <h2
             id="footer-policy-title"
-            class="text-[14px] font-bold uppercase tracking-wide text-ink"
+            class="text-[14px] font-bold uppercase tracking-wide text-ink dark:text-ink-invert"
           >
             Chính sách
           </h2>
-          <ul class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted">
+          <ul
+            class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
+          >
             <li><a href="#" class="hover:text-brand-500">Bảo mật</a></li>
             <li><a href="#" class="hover:text-brand-500">Điều khoản</a></li>
             <li><a href="#" class="hover:text-brand-500">Thanh toán</a></li>
@@ -1089,11 +1135,13 @@
         <nav aria-labelledby="footer-contact-title">
           <h2
             id="footer-contact-title"
-            class="text-[14px] font-bold uppercase tracking-wide text-ink"
+            class="text-[14px] font-bold uppercase tracking-wide text-ink dark:text-ink-invert"
           >
             Liên hệ
           </h2>
-          <ul class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted">
+          <ul
+            class="mt-[16px] flex flex-col gap-[16px] text-[16px] text-muted dark:text-muted-invert"
+          >
             <li>TP. Hồ Chí Minh</li>
             <li>
               <a href="mailto:support@annie.vn" class="hover:text-brand-500"
@@ -1122,9 +1170,12 @@
             alt=""
             class="h-[32.62px] w-[29.76px] object-contain"
           />
-          <span class="font-display text-[24px] font-bold text-ink">Annie</span>
+          <span
+            class="font-display text-[24px] font-bold text-ink dark:text-ink-invert"
+            >Annie</span
+          >
         </a>
-        <p class="mt-[5px] text-[16px] text-muted">
+        <p class="mt-[5px] text-[16px] text-muted dark:text-muted-invert">
           © 2026 Annie. All rights reserved.
         </p>
         <div class="mx-auto mt-[5px] flex items-center justify-center">
