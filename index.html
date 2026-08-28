@@ -775,64 +775,186 @@
         </div>
       </section>
       <!-- =========================
-           6. TESTIMONIAL
-      ========================== -->
+     TESTIMONIAL SLIDER
+========================== -->
       <section
         id="testimonials"
         data-reveal
-        class="bg-brand-50 dark:bg-surface-dark-alt py-16 lg:py-[86px]"
+        class="bg-brand-50 py-16 dark:bg-surface-dark-alt lg:py-[86px]"
         aria-labelledby="testimonials-title"
       >
         <h2 id="testimonials-title" class="sr-only">Đánh giá của khách hàng</h2>
 
-        <div class="mx-auto w-full max-w-[900px] px-5 text-center">
-          <figure class="flex flex-col items-center">
+        <div
+          id="testimonial-slider"
+          class="relative mx-auto w-full max-w-[900px] px-5"
+        >
+          <!-- Khung nhìn -->
+          <div class="overflow-hidden">
+            <!-- Track -->
             <div
-              class="relative top-[20px] font-display text-[100px] font-extrabold leading-[60px] text-muted dark:text-muted-invert/40"
-              aria-hidden="true"
+              data-slider-track
+              class="flex transition-transform duration-500 ease-out"
             >
-              “
+              <!-- SLIDE 1 -->
+              <article data-slide class="w-full shrink-0">
+                <figure class="flex flex-col items-center text-center">
+                  <div
+                    class="relative top-[20px] font-display text-[100px] font-extrabold leading-[60px] text-muted dark:text-muted-invert/40"
+                    aria-hidden="true"
+                  >
+                    “
+                  </div>
+
+                  <blockquote class="mt-[20px]">
+                    <p
+                      class="mx-auto w-full max-w-[768px] px-6 font-display text-[20px] font-semibold leading-[32px] text-ink dark:text-ink-invert sm:px-10 lg:px-0 lg:text-[24px] lg:leading-[37px]"
+                    >
+                      Annie giúp mình tìm sản phẩm nhanh hơn rất nhiều. Thông
+                      tin rõ ràng, giao diện dễ xem và mình có thể so sánh các
+                      lựa chọn trước khi mua.
+                    </p>
+                  </blockquote>
+
+                  <figcaption
+                    class="mt-[20px] flex flex-wrap items-center justify-center gap-[10px]"
+                  >
+                    <span
+                      class="grid h-[28px] w-[28px] place-items-center rounded-full bg-brand-100 text-[14px] font-bold text-brand-700"
+                      aria-hidden="true"
+                    >
+                      M
+                    </span>
+
+                    <cite
+                      class="text-[16px] font-semibold not-italic text-ink dark:text-ink-invert"
+                    >
+                      Minh Anh
+                    </cite>
+
+                    <span class="text-[14px] text-muted dark:text-muted-invert">
+                      Khách hàng của Annie
+                    </span>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <!-- SLIDE 2 -->
+              <article data-slide class="w-full shrink-0" inert>
+                <figure class="flex flex-col items-center text-center">
+                  <div
+                    class="relative top-[20px] font-display text-[100px] font-extrabold leading-[60px] text-muted dark:text-muted-invert/40"
+                    aria-hidden="true"
+                  >
+                    “
+                  </div>
+
+                  <blockquote class="mt-[20px]">
+                    <p
+                      class="mx-auto max-w-[768px] font-display text-[20px] font-semibold leading-[32px] text-ink dark:text-ink-invert lg:text-[24px] lg:leading-[37px]"
+                    >
+                      Mình thích cách Annie trình bày thông tin sản phẩm rất rõ
+                      ràng. Việc tìm đúng sản phẩm cho nhu cầu chăm sóc da trở
+                      nên dễ hơn.
+                    </p>
+                  </blockquote>
+
+                  <figcaption
+                    class="mt-[20px] flex flex-wrap items-center justify-center gap-[10px]"
+                  >
+                    <span
+                      class="grid h-[28px] w-[28px] place-items-center rounded-full bg-brand-100 text-[14px] font-bold text-brand-700"
+                      aria-hidden="true"
+                    >
+                      L
+                    </span>
+
+                    <cite
+                      class="text-[16px] font-semibold not-italic text-ink dark:text-ink-invert"
+                    >
+                      Lan Chi
+                    </cite>
+
+                    <span class="text-[14px] text-muted dark:text-muted-invert">
+                      Khách hàng của Annie
+                    </span>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <!-- SLIDE 3 -->
+              <article data-slide class="w-full shrink-0" inert>
+                <figure class="flex flex-col items-center text-center">
+                  <div
+                    class="relative top-[20px] font-display text-[100px] font-extrabold leading-[60px] text-muted dark:text-muted-invert/40"
+                    aria-hidden="true"
+                  >
+                    “
+                  </div>
+
+                  <blockquote class="mt-[20px]">
+                    <p
+                      class="mx-auto max-w-[768px] font-display text-[20px] font-semibold leading-[32px] text-ink dark:text-ink-invert lg:text-[24px] lg:leading-[37px]"
+                    >
+                      Giao diện dễ sử dụng trên cả điện thoại. Mình có thể xem
+                      thương hiệu, giá và thông tin sản phẩm mà không bị rối.
+                    </p>
+                  </blockquote>
+
+                  <figcaption
+                    class="mt-[20px] flex flex-wrap items-center justify-center gap-[10px]"
+                  >
+                    <span
+                      class="grid h-[28px] w-[28px] place-items-center rounded-full bg-brand-100 text-[14px] font-bold text-brand-700"
+                      aria-hidden="true"
+                    >
+                      H
+                    </span>
+
+                    <cite
+                      class="text-[16px] font-semibold not-italic text-ink dark:text-ink-invert"
+                    >
+                      Hoàng My
+                    </cite>
+
+                    <span class="text-[14px] text-muted dark:text-muted-invert">
+                      Khách hàng của Annie
+                    </span>
+                  </figcaption>
+                </figure>
+              </article>
             </div>
+          </div>
 
-            <blockquote class="mt-[20px]">
-              <p
-                class="h-auto w-full max-w-[768px] font-display text-[20px] font-semibold leading-[32px] text-ink dark:text-ink-invert lg:h-[117px] lg:text-[24px] lg:leading-[37px]"
-              >
-                <span class="block lg:mx-[5px]">
-                  “Annie giúp mình tìm sản phẩm nhanh hơn rất nhiều.Thông
-                </span>
-
-                <span class="block">
-                  tin rõ ràng, giao diện dễ xem và mình có thể so sánh các lựa
-                </span>
-
-                <span class="block lg:mx-[5px]">
-                  chọn trước khi mua sản phẩm phù hợp với bản thân mình .”
-                </span>
-              </p>
-            </blockquote>
-
-            <figcaption
-              class="mt-[20px] flex flex-wrap items-center justify-center gap-[10px]"
+          <!-- CONTROLS -->
+          <div class="mt-8 flex items-center justify-center gap-4">
+            <!-- Previous -->
+            <button
+              type="button"
+              data-slider-prev
+              aria-label="Xem cảm nhận trước"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-ink shadow-md transition hover:bg-brand-100 dark:bg-surface-dark dark:text-ink-invert"
             >
-              <span
-                class="grid h-[28px] w-[28px] shrink-0 place-items-center rounded-full bg-brand-100 text-[14px] font-bold text-brand-700"
-                aria-hidden="true"
-              >
-                M
-              </span>
+              ←
+            </button>
 
-              <cite
-                class="text-[16px] font-semibold not-italic text-ink dark:text-ink-invert"
-              >
-                Minh Anh /
-              </cite>
+            <!-- Dots sinh bằng JS -->
+            <div
+              data-slider-dots
+              class="flex items-center justify-center gap-2"
+              aria-label="Chọn cảm nhận"
+            ></div>
 
-              <span class="text-[14px] text-muted dark:text-muted-invert">
-                Khách hàng của Annie
-              </span>
-            </figcaption>
-          </figure>
+            <!-- Next -->
+            <button
+              type="button"
+              data-slider-next
+              aria-label="Xem cảm nhận tiếp theo"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-ink shadow-md transition hover:bg-brand-100 dark:bg-surface-dark dark:text-ink-invert"
+            >
+              →
+            </button>
+          </div>
         </div>
       </section>
       <!-- =========================
