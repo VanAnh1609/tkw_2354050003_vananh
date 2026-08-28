@@ -38,3 +38,9 @@ Header và Footer hiện đang được lặp lại trong `index.html`,
 
 Nếu có thêm thời gian, em sẽ tách Header và Footer thành component
 dùng chung để dễ bảo trì và cập nhật hơn.
+
+### Tương tác tự chọn - Copy mã khuyến mãi
+
+Người dùng có thể sao chép nhanh mã khuyến mãi ANNIE10 chỉ bằng một lần nhấn.
+Sau khi sao chép, giao diện hiển thị phản hồi để người dùng biết thao tác đã thành công.
+Tính năng giúp giảm thao tác nhập thủ công và thuận tiện hơn khi sử dụng mã ưu đãi.

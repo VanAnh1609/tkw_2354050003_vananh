@@ -393,6 +393,9 @@
   .max-h-\[42px\] {
     max-height: 42px;
   }
+  .min-h-\[24px\] {
+    min-height: 24px;
+  }
   .min-h-\[28px\] {
     min-height: 28px;
   }
