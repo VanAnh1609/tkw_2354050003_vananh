@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@theme static {
+  /* ===== Brand colors ===== */
+  --color-brand-50: #fcf5f7;
+  --color-brand-100: #f9e7ec;
+  --color-brand-400: #df8aa2;
+  --color-brand-500: #cf6483;
+  --color-brand-700: #9c3955;
+
+  /* ===== Accent colors ===== */
+  --color-accent-300: #f6e6a8;
+  --color-accent-400: #eecb5b;
+  --color-accent-500: #eab735;
+
+  /* ===== Màu chữ ===== */
+  --color-ink: #121826;
+  --color-muted: #667085;
+  --color-line: #e5e7eb;
+  --color-surface: #ffffff;
+
+  /* ===== Dark mode tokens ===== */
+  --color-ink-invert: #f3edf0;
+  --color-muted-invert: #c7bfc3;
+  --color-line-invert: #49333b;
+  --color-surface-dark: #21171b;
+  --color-surface-dark-alt: #2b1d22;
+
+  /* ===== Font ===== */
+  --font-display: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --radius-card: 0.875rem;
+  --radius-pill: 999px;
+}
+
+.section {
+  @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
+}
+
+@layer components {
+  /* 1. Nút cơ bản */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-card
+           font-semibold transition-colors;
+  }
+
+  /* 2. Nút chính màu hồng */
+  .btn-primary {
+    @apply bg-brand-500 font-semibold text-white shadow-sm
+           transition-colors hover:bg-brand-700;
+  }
+
+  /* 3. Nút phụ màu hồng nhạt */
+  .btn-brand {
+    @apply bg-brand-100 font-semibold text-brand-700 shadow-sm
+           transition-colors hover:bg-brand-400 hover:text-white;
+  }
+
+  /* 4. Nút viền */
+  .btn-outline {
+    @apply border border-brand-400 bg-surface font-medium
+           text-brand-700 transition-colors hover:bg-brand-50
+           dark:bg-surface-dark-alt dark:text-ink-invert;
+  }
+
+  /* 5. Nền section chính */
+  .surface {
+    @apply bg-surface text-ink
+           dark:bg-surface-dark dark:text-ink-invert;
+  }
+
+  /* 6. Nền section phụ */
+  .surface-soft {
+    @apply bg-brand-50 text-ink
+           dark:bg-surface-dark-alt dark:text-ink-invert;
+  }
+  .pricing-switch {
+    @apply relative inline-flex h-7 w-14 shrink-0 cursor-pointer
+         items-center rounded-full bg-brand-400 p-1
+         transition-colors;
+  }
+
+  .pricing-switch[aria-checked="true"] {
+    @apply bg-brand-500;
+  }
+
+  .pricing-switch-thumb {
+    @apply block h-5 w-5 rounded-full bg-white shadow-md
+         transition-transform duration-200;
+  }
+
+  .pricing-switch[aria-checked="true"] .pricing-switch-thumb {
+    @apply translate-x-7;
+  }
+
+  /* 7. Card */
+  .card {
+    @apply rounded-card border border-line bg-surface p-6
+           dark:border-line-invert
+           dark:bg-surface-dark-alt
+           dark:text-ink-invert;
+  }
+
+  /* 8. Chữ nhỏ phía trên tiêu đề */
+  .eyebrow {
+    @apply font-body text-sm font-semibold text-brand-500;
+  }
+
+  /* 9. Label cho form */
+  .field-label {
+    @apply mb-2 block font-body text-sm font-semibold text-ink
+           dark:text-ink-invert;
+  }
+
+  /* 10. Input cho form */
+  .field-input {
+    @apply w-full rounded-card border border-line bg-surface
+           px-4 py-3 font-body text-ink outline-none
+           focus:border-brand-500 focus:ring-2 focus:ring-brand-100
+           dark:border-line-invert
+           dark:bg-surface-dark-alt
+           dark:text-ink-invert;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-surface font-body text-ink antialiased
+         dark:bg-surface-dark dark:text-ink-invert;
+  }
+}
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
