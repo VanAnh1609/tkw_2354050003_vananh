@@ -25,18 +25,24 @@
     >
       Bỏ qua đến nội dung chính
     </a>
+    <!-- Mốc để theo dõi trạng thái cuộn của navbar -->
+    <div id="nav-sentinel" class="h-px w-full"></div>
 
     <!-- ==================================================
-         HEADER / NAVBAR
-    ================================================== -->
+     HEADER / NAVBAR
+================================================== -->
     <header
-      class="w-full border-b border-line dark:border-line-invert bg-surface dark:bg-surface-dark"
+      id="site-header"
+      class="sticky top-0 z-40 w-full border-b border-line bg-surface transition-shadow dark:border-line-invert dark:bg-surface-dark"
     >
+      <!-- NAVBAR CHÍNH -->
       <nav
         class="mx-auto flex w-full items-center justify-between px-5 py-4 lg:h-[85px] lg:max-w-[1280px] lg:px-0 lg:py-[24px]"
         aria-label="Điều hướng chính"
       >
+        <!-- LOGO + MENU DESKTOP -->
         <div class="flex items-center gap-[32px]">
+          <!-- Logo -->
           <a
             href="index.html"
             class="flex items-center gap-[10px] lg:h-[36px] lg:gap-[12px]"
@@ -47,6 +53,7 @@
               alt=""
               class="h-[28px] w-[26px] shrink-0 object-contain lg:h-[32.62px] lg:w-[29.76px]"
             />
+
             <span
               class="font-display text-[20px] font-semibold leading-[150%] tracking-tight text-ink dark:text-ink-invert lg:text-[24px]"
             >
@@ -54,62 +61,80 @@
             </span>
           </a>
 
+          <!-- MENU DESKTOP -->
           <ul class="hidden items-center gap-[32px] lg:flex">
             <li>
               <a
                 href="#hero"
                 class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
-                >Trang chủ</a
               >
+                Trang chủ
+              </a>
             </li>
+
             <li>
               <a
                 href="#features"
                 class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
-                >Sản phẩm</a
               >
+                Sản phẩm
+              </a>
             </li>
+
             <li>
               <a
                 href="#brands"
                 class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
-                >Thương hiệu</a
               >
+                Thương hiệu
+              </a>
             </li>
+
             <li>
               <a
                 href="#testimonials"
                 class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
-                >Bảng giá</a
               >
+                Bảng giá
+              </a>
             </li>
+
             <li>
               <a
                 href="#faq"
                 class="font-body text-[16px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
-                >Liên hệ</a
               >
+                Liên hệ
+              </a>
             </li>
           </ul>
         </div>
 
+        <!-- NÚT DESKTOP -->
         <div class="hidden items-center gap-[16px] lg:flex">
           <a
             href="#login"
             class="font-body text-[14px] font-medium text-ink dark:text-ink-invert hover:text-brand-500"
-            >Đăng nhập</a
           >
+            Đăng nhập
+          </a>
+
           <a
             href="#pricing"
             class="btn-primary rounded-card px-[12px] py-[8px] font-body text-[14px] font-medium"
-            >Mua sắm ngay</a
           >
+            Mua sắm ngay
+          </a>
         </div>
 
+        <!-- NÚT HAMBURGER MOBILE -->
         <button
+          id="menu-toggle"
           type="button"
-          class="flex h-10 w-10 items-center justify-center rounded-card text-ink dark:text-ink-invert lg:hidden"
+          class="flex h-10 w-10 items-center justify-center lg:hidden"
           aria-label="Mở menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
         >
           <svg
             class="h-6 w-6"
@@ -127,6 +152,82 @@
           </svg>
         </button>
       </nav>
+
+      <!-- ==================================================
+       MOBILE MENU
+       JS sẽ mở/đóng phần này
+  ================================================== -->
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-line bg-surface px-5 py-5 dark:border-line-invert dark:bg-surface-dark lg:hidden"
+      >
+        <nav aria-label="Điều hướng mobile">
+          <ul class="flex flex-col gap-4">
+            <li>
+              <a
+                href="#hero"
+                class="block py-2 font-body text-[16px] font-medium text-ink hover:text-brand-500 dark:text-ink-invert"
+              >
+                Trang chủ
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#features"
+                class="block py-2 font-body text-[16px] font-medium text-ink hover:text-brand-500 dark:text-ink-invert"
+              >
+                Sản phẩm
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#brands"
+                class="block py-2 font-body text-[16px] font-medium text-ink hover:text-brand-500 dark:text-ink-invert"
+              >
+                Thương hiệu
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#testimonials"
+                class="block py-2 font-body text-[16px] font-medium text-ink hover:text-brand-500 dark:text-ink-invert"
+              >
+                Bảng giá
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#faq"
+                class="block py-2 font-body text-[16px] font-medium text-ink hover:text-brand-500 dark:text-ink-invert"
+              >
+                Liên hệ
+              </a>
+            </li>
+
+            <li class="border-t border-line pt-4 dark:border-line-invert">
+              <a
+                href="#login"
+                class="block py-2 font-body text-[16px] font-medium text-ink hover:text-brand-500 dark:text-ink-invert"
+              >
+                Đăng nhập
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#pricing"
+                class="btn-primary inline-flex rounded-card px-4 py-3 font-body text-[14px] font-medium"
+              >
+                Mua sắm ngay
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main id="main-content">
@@ -1187,5 +1288,15 @@
         </div>
       </div>
     </footer>
+    <button
+      id="to-top"
+      type="button"
+      aria-label="Lên đầu trang"
+      class="fixed bottom-6 right-6 z-50 hidden flex h-12 w-12 items-center justify-center rounded-full bg-brand-500 text-white shadow-lg transition hover:bg-brand-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-300 focus:ring-offset-2"
+    >
+      ↑
+    </button>
+
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
