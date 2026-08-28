@@ -6,6 +6,18 @@
 
     <title>ANNIE - Cửa hàng mỹ phẩm</title>
 
+    <script>
+      (function () {
+        const saved = localStorage.getItem("theme");
+
+        const dark = saved
+          ? saved === "dark"
+          : window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -126,6 +138,16 @@
             Mua sắm ngay
           </a>
         </div>
+
+        <!-- NÚT DARK MODE -->
+        <button
+          id="theme-toggle"
+          type="button"
+          class="flex h-10 w-10 items-center justify-center rounded-card text-ink transition hover:bg-brand-50 dark:text-ink-invert dark:hover:bg-surface-dark-alt"
+          aria-label="Bật chế độ tối"
+        >
+          <span id="theme-icon" aria-hidden="true">🌙</span>
+        </button>
 
         <!-- NÚT HAMBURGER MOBILE -->
         <button
@@ -1015,7 +1037,7 @@
       ========================== -->
       <section
         id="faq"
-        class="bg-white dark:bg-surface-dark pb-16 lg:pb-[98px]"
+        class="bg-white pb-16 dark:bg-surface-dark lg:pb-[98px]"
         aria-labelledby="faq-title"
       >
         <div class="mx-auto w-full max-w-[760px] px-5">
@@ -1027,87 +1049,117 @@
           </h2>
 
           <div class="mt-[50px]">
-            <details
-              class="border-b border-line dark:border-line-invert py-[18px]"
-              open
-            >
-              <summary
-                class="cursor-pointer list-none text-[18px] font-semibold text-ink dark:text-ink-invert"
+            <!-- FAQ 1 -->
+            <div class="border-b border-line py-[18px] dark:border-line-invert">
+              <button
+                type="button"
+                data-faq-trigger
+                aria-expanded="true"
+                aria-controls="faq-panel-1"
+                class="flex w-full items-center justify-between gap-4 text-left text-[18px] font-semibold text-ink dark:text-ink-invert"
               >
-                Sản phẩm tại Annie có thông tin thương hiệu rõ ràng không?
-              </summary>
-              <div
-                class="mt-[17px] border-t border-line dark:border-line-invert pt-[14px]"
-              ></div>
-              <p
-                class="mt-[10px] pl-[10px] text-[16px] leading-[25px] text-muted dark:text-muted-invert"
-              >
-                Có. Mỗi sản phẩm tại Annie đều được trình bày rõ ràng với tên
-                thương hiệu, mô tả, công dụng và những thông tin cần thiết để
-                bạn dễ dàng tham khảo trước khi lựa chọn. Bạn cũng có thể xem
-                thêm thông tin chi tiết để đưa ra quyết định phù hợp hơn.
-              </p>
+                <span>
+                  Sản phẩm tại Annie có thông tin thương hiệu rõ ràng không?
+                </span>
 
-              <p
-                class="mt-[12px] pl-[10px] text-[16px] leading-[25px] text-muted dark:text-muted-invert"
-              >
-                Ngoài ra, Annie còn cung cấp thông tin chi tiết về sản phẩm để
-                bạn có thể dễ dàng so sánh các lựa chọn và tìm được sản phẩm phù
-                hợp với nhu cầu chăm sóc da của mình.
-              </p>
-            </details>
+                <span aria-hidden="true">−</span>
+              </button>
 
-            <details
-              class="border-b border-line dark:border-line-invert py-[18px]"
-            >
-              <summary
-                class="cursor-pointer list-none text-[18px] font-semibold text-ink dark:text-ink-invert"
-              >
-                Tôi có thể lưu sản phẩm yêu thích để xem lại không?
-              </summary>
-              <p
-                class="pt-[14px] text-[16px] leading-[20px] text-muted dark:text-muted-invert"
-              >
-                Có. Bạn có thể lưu các sản phẩm quan tâm để dễ dàng xem lại và
-                so sánh.
-              </p>
-            </details>
+              <div id="faq-panel-1" data-faq-panel class="pt-[14px]">
+                <div
+                  class="mb-[10px] border-t border-line dark:border-line-invert"
+                ></div>
 
-            <details
-              class="border-b border-line dark:border-line-invert py-[18px]"
-            >
-              <summary
-                class="cursor-pointer list-none text-[18px] font-semibold text-ink dark:text-ink-invert"
-              >
-                Annie có hỗ trợ lựa chọn sản phẩm không?
-              </summary>
-              <p
-                class="pt-[14px] text-[16px] leading-[20px] text-muted dark:text-muted-invert"
-              >
-                Annie cung cấp thông tin rõ ràng giúp bạn tham khảo và lựa chọn
-                sản phẩm phù hợp với nhu cầu chăm sóc.
-              </p>
-            </details>
+                <p
+                  class="pl-[10px] text-[16px] leading-[25px] text-muted dark:text-muted-invert"
+                >
+                  Có. Mỗi sản phẩm tại Annie đều được trình bày rõ ràng với tên
+                  thương hiệu, mô tả, công dụng và những thông tin cần thiết để
+                  bạn dễ dàng tham khảo trước khi lựa chọn. Bạn cũng có thể xem
+                  thêm thông tin chi tiết để đưa ra quyết định phù hợp hơn.
+                </p>
 
-            <details
-              class="border-b border-line dark:border-line-invert py-[18px]"
-            >
-              <summary
-                class="cursor-pointer list-none text-[18px] font-semibold text-ink dark:text-ink-invert"
+                <p
+                  class="mt-[12px] pl-[10px] text-[16px] leading-[25px] text-muted dark:text-muted-invert"
+                >
+                  Ngoài ra, Annie còn cung cấp thông tin chi tiết về sản phẩm để
+                  bạn có thể dễ dàng so sánh các lựa chọn và tìm được sản phẩm
+                  phù hợp với nhu cầu chăm sóc da của mình.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="border-b border-line py-[18px] dark:border-line-invert">
+              <button
+                type="button"
+                data-faq-trigger
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+                class="flex w-full items-center justify-between gap-4 text-left text-[18px] font-semibold text-ink dark:text-ink-invert"
               >
-                Tôi có thể xem sản phẩm theo thương hiệu không?
-              </summary>
-              <p
-                class="pt-[14px] text-[16px] leading-[20px] text-muted dark:text-muted-invert"
+                <span>Tôi có thể lưu sản phẩm yêu thích để xem lại không?</span>
+                <span aria-hidden="true">+</span>
+              </button>
+
+              <div id="faq-panel-2" data-faq-panel class="hidden pt-[14px]">
+                <p
+                  class="text-[16px] leading-[20px] text-muted dark:text-muted-invert"
+                >
+                  Có. Bạn có thể lưu các sản phẩm quan tâm để dễ dàng xem lại và
+                  so sánh.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="border-b border-line py-[18px] dark:border-line-invert">
+              <button
+                type="button"
+                data-faq-trigger
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+                class="flex w-full items-center justify-between gap-4 text-left text-[18px] font-semibold text-ink dark:text-ink-invert"
               >
-                Có. Bạn có thể khám phá sản phẩm theo từng thương hiệu và nhóm
-                sản phẩm.
-              </p>
-            </details>
+                <span>Annie có hỗ trợ lựa chọn sản phẩm không?</span>
+                <span aria-hidden="true">+</span>
+              </button>
+
+              <div id="faq-panel-3" data-faq-panel class="hidden pt-[14px]">
+                <p
+                  class="text-[16px] leading-[20px] text-muted dark:text-muted-invert"
+                >
+                  Annie cung cấp thông tin rõ ràng giúp bạn tham khảo và lựa
+                  chọn sản phẩm phù hợp với nhu cầu chăm sóc.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="border-b border-line py-[18px] dark:border-line-invert">
+              <button
+                type="button"
+                data-faq-trigger
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+                class="flex w-full items-center justify-between gap-4 text-left text-[18px] font-semibold text-ink dark:text-ink-invert"
+              >
+                <span>Tôi có thể xem sản phẩm theo thương hiệu không?</span>
+                <span aria-hidden="true">+</span>
+              </button>
+
+              <div id="faq-panel-4" data-faq-panel class="hidden pt-[14px]">
+                <p
+                  class="text-[16px] leading-[20px] text-muted dark:text-muted-invert"
+                >
+                  Có. Bạn có thể khám phá sản phẩm theo từng thương hiệu và nhóm
+                  sản phẩm.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
       <!-- =========================
            9. CTA
       ========================== -->
