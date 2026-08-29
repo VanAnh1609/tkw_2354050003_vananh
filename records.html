@@ -21,7 +21,9 @@
     class="min-h-screen bg-surface font-body text-ink antialiased dark:bg-surface-dark dark:text-ink-invert"
   >
     <main class="mx-auto w-full max-w-[1280px] px-5 py-12">
-      <!-- HEADER -->
+      <!-- ==================================================
+           HEADER
+      ================================================== -->
       <section class="mb-10">
         <p class="font-semibold text-brand-500">Buổi 5 - Dữ liệu động</p>
 
@@ -36,11 +38,89 @@
         </p>
       </section>
 
-      <!-- KHUNG DANH SÁCH -->
+      <!-- ==================================================
+           TÌM KIẾM / LỌC / SẮP XẾP
+      ================================================== -->
+      <section
+        class="mb-6 grid gap-4 md:grid-cols-2 lg:grid-cols-5"
+        aria-label="Công cụ tìm kiếm và lọc dữ liệu"
+      >
+        <!-- Tìm kiếm -->
+        <div class="md:col-span-2">
+          <label
+            for="record-search"
+            class="mb-2 block text-[14px] font-semibold"
+          >
+            Tìm người giao dịch
+          </label>
+
+          <input
+            id="record-search"
+            type="search"
+            placeholder="Ví dụ: Cần Thơ..."
+            class="field-input"
+          />
+        </div>
+
+        <!-- Loại -->
+        <div>
+          <label
+            for="record-category"
+            class="mb-2 block text-[14px] font-semibold"
+          >
+            Loại
+          </label>
+
+          <select id="record-category" class="field-input">
+            <option value="all">Tất cả</option>
+            <option value="Xoài">Xoài</option>
+            <option value="Cam">Cam</option>
+            <option value="Bưởi">Bưởi</option>
+            <option value="Thanh long">Thanh long</option>
+            <option value="Dừa">Dừa</option>
+          </select>
+        </div>
+
+        <!-- Trạng thái -->
+        <div>
+          <label
+            for="record-status"
+            class="mb-2 block text-[14px] font-semibold"
+          >
+            Trạng thái
+          </label>
+
+          <select id="record-status" class="field-input">
+            <option value="all">Tất cả</option>
+            <option value="da-chot">Đã chốt</option>
+            <option value="dang-xu-ly">Đang xử lý</option>
+            <option value="huy">Đã hủy</option>
+          </select>
+        </div>
+
+        <!-- Sắp xếp -->
+        <div>
+          <label for="record-sort" class="mb-2 block text-[14px] font-semibold">
+            Sắp xếp
+          </label>
+
+          <select id="record-sort" class="field-input">
+            <option value="date-desc">Ngày mới nhất</option>
+            <option value="date-asc">Ngày cũ nhất</option>
+            <option value="amount-desc">Số tiền cao nhất</option>
+            <option value="amount-asc">Số tiền thấp nhất</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- ==================================================
+           KHUNG DANH SÁCH
+      ================================================== -->
       <section
         class="overflow-hidden rounded-card border border-line bg-white dark:border-line-invert dark:bg-surface-dark-alt"
         aria-labelledby="records-title"
       >
+        <!-- Header bảng -->
         <div
           class="flex flex-wrap items-center justify-between gap-4 border-b border-line px-5 py-4 dark:border-line-invert"
         >
@@ -77,7 +157,7 @@
           <p class="font-semibold">Không có dữ liệu để hiển thị.</p>
 
           <p class="mt-2 text-[14px] text-muted dark:text-muted-invert">
-            Hãy thử lại sau hoặc khôi phục dữ liệu mẫu.
+            Hãy thử thay đổi từ khóa hoặc bộ lọc.
           </p>
         </div>
 
@@ -113,7 +193,9 @@
       </section>
     </main>
 
-    <!-- TEMPLATE TẠO TỪNG DÒNG -->
+    <!-- ==================================================
+         TEMPLATE TẠO TỪNG DÒNG
+    ================================================== -->
     <template id="row-template">
       <tr>
         <td
