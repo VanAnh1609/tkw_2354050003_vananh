@@ -1,3 +1,5 @@
+const STORAGE_KEY = "annie-records";
+
 const state = {
   records: [],
   query: "",
@@ -23,6 +25,14 @@ const categorySelect = document.getElementById("record-category");
 const statusSelect = document.getElementById("record-status");
 const sortSelect = document.getElementById("record-sort");
 
+const addButton = document.getElementById("add-record");
+const resetButton = document.getElementById("reset-records");
+
+const dialog = document.getElementById("record-dialog");
+const form = document.getElementById("record-form");
+const closeDialogButton = document.getElementById("close-record-dialog");
+const cancelButton = document.getElementById("cancel-record");
+
 const sorters = {
   "date-desc": (a, b) => b.date.localeCompare(a.date),
   "date-asc": (a, b) => a.date.localeCompare(b.date),
@@ -42,6 +52,24 @@ function debounce(fn, delay = 300) {
   };
 }
 
+function saveRecords() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state.records));
+}
+
+function readStoredRecords() {
+  const saved = localStorage.getItem(STORAGE_KEY);
+
+  if (!saved) return null;
+
+  try {
+    const parsed = JSON.parse(saved);
+
+    return Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
 function formatMoney(value) {
   return new Intl.NumberFormat("vi-VN", {
     style: "currency",
@@ -58,6 +86,16 @@ function formatDate(value) {
   return new Intl.DateTimeFormat("vi-VN").format(new Date(value));
 }
 
+function statusLabel(status) {
+  const labels = {
+    "da-chot": "Đã chốt",
+    "dang-xu-ly": "Đang xử lý",
+    huy: "Đã hủy",
+  };
+
+  return labels[status] ?? status;
+}
+
 function visibleRecords() {
   const query = state.query.trim().toLowerCase();
 
@@ -71,16 +109,6 @@ function visibleRecords() {
     )
     .filter((record) => !query || record.trader.toLowerCase().includes(query))
     .sort(sorters[state.sort]);
-}
-
-function statusLabel(status) {
-  const labels = {
-    "da-chot": "Đã chốt",
-    "dang-xu-ly": "Đang xử lý",
-    huy: "Đã hủy",
-  };
-
-  return labels[status] ?? status;
 }
 
 function buildRow(record) {
@@ -105,6 +133,10 @@ function buildRow(record) {
   );
 
   row.querySelector("[data-cell='date']").textContent = formatDate(record.date);
+
+  const deleteButton = row.querySelector("[data-delete]");
+
+  deleteButton.dataset.id = record.id;
 
   return row;
 }
@@ -141,7 +173,7 @@ function render() {
   tbody.replaceChildren(...rows);
 }
 
-async function loadRecords() {
+async function fetchSampleRecords() {
   const response = await fetch("./data/records.json");
 
   if (!response.ok) {
@@ -149,6 +181,20 @@ async function loadRecords() {
   }
 
   return response.json();
+}
+
+async function loadRecords() {
+  const stored = readStoredRecords();
+
+  if (stored) {
+    return stored;
+  }
+
+  const sampleRecords = await fetchSampleRecords();
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(sampleRecords));
+
+  return sampleRecords;
 }
 
 const handleSearch = debounce((event) => {
@@ -171,6 +217,93 @@ statusSelect.addEventListener("change", (event) => {
 sortSelect.addEventListener("change", (event) => {
   state.sort = event.target.value;
   render();
+});
+
+addButton.addEventListener("click", () => {
+  form.reset();
+  dialog.showModal();
+});
+
+closeDialogButton.addEventListener("click", () => {
+  dialog.close();
+});
+
+cancelButton.addEventListener("click", () => {
+  dialog.close();
+});
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  const formData = new FormData(form);
+
+  const record = {
+    id: String(formData.get("id")).trim(),
+    trader: String(formData.get("trader")).trim(),
+    category: String(formData.get("category")),
+    status: String(formData.get("status")),
+    weight: Number(formData.get("weight")),
+    amount: Number(formData.get("amount")),
+    date: String(formData.get("date")),
+  };
+
+  const duplicate = state.records.some((item) => item.id === record.id);
+
+  if (duplicate) {
+    alert("Mã giao dịch đã tồn tại.");
+    return;
+  }
+
+  state.records = [record, ...state.records];
+
+  saveRecords();
+  render();
+
+  dialog.close();
+});
+
+tbody.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-delete]");
+
+  if (!button) return;
+
+  const id = button.dataset.id;
+
+  const accepted = window.confirm(`Bạn có chắc muốn xóa bản ghi ${id}?`);
+
+  if (!accepted) return;
+
+  state.records = state.records.filter((record) => record.id !== id);
+
+  saveRecords();
+  render();
+});
+
+resetButton.addEventListener("click", async () => {
+  const accepted = window.confirm("Khôi phục lại toàn bộ dữ liệu mẫu?");
+
+  if (!accepted) return;
+
+  resetButton.disabled = true;
+
+  try {
+    state.error = null;
+    state.records = await fetchSampleRecords();
+
+    saveRecords();
+    render();
+  } catch (error) {
+    state.error = `Không khôi phục được dữ liệu: ${error.message}`;
+
+    render();
+  } finally {
+    resetButton.disabled = false;
+  }
 });
 
 async function initRecords() {
