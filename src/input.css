@@ -71,6 +71,13 @@
            dark:bg-surface-dark dark:text-ink-invert;
   }
 
+  .field-error {
+    @apply mt-1.5 min-h-[20px] text-sm text-red-600;
+  }
+
+  .field-input[aria-invalid="true"] {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-500/20;
+  }
   /* 6. Nền section phụ */
   .surface-soft {
     @apply bg-brand-50 text-ink
@@ -96,6 +103,7 @@
   }
 
   /* 7. Card */
+
   .card {
     @apply rounded-card border border-line bg-surface p-6
            dark:border-line-invert
