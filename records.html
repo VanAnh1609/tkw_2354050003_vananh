@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="vi" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dữ liệu giao dịch - ANNIE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+
+  <body
+    class="min-h-screen bg-surface font-body text-ink antialiased dark:bg-surface-dark dark:text-ink-invert"
+  >
+    <main class="mx-auto w-full max-w-[1280px] px-5 py-12">
+      <!-- ==================================================
+           HEADER
+      ================================================== -->
+      <section class="mb-10">
+        <p class="font-semibold text-brand-500">Buổi 5 - Dữ liệu động</p>
+
+        <h1
+          class="mt-2 font-display text-[32px] font-extrabold leading-tight lg:text-[42px]"
+        >
+          Danh sách giao dịch
+        </h1>
+
+        <p class="mt-3 max-w-[720px] text-muted dark:text-muted-invert">
+          Dữ liệu được đọc từ file JSON và hiển thị bằng JavaScript.
+        </p>
+      </section>
+
+      <!-- ==================================================
+           TÌM KIẾM / LỌC / SẮP XẾP
+      ================================================== -->
+      <section
+        class="mb-6 grid gap-4 md:grid-cols-2 lg:grid-cols-5"
+        aria-label="Công cụ tìm kiếm và lọc dữ liệu"
+      >
+        <!-- Tìm kiếm -->
+        <div class="md:col-span-2">
+          <label
+            for="record-search"
+            class="mb-2 block text-[14px] font-semibold"
+          >
+            Tìm người giao dịch
+          </label>
+
+          <input
+            id="record-search"
+            type="search"
+            placeholder="Ví dụ: Cần Thơ..."
+            class="field-input"
+          />
+        </div>
+
+        <!-- Loại -->
+        <div>
+          <label
+            for="record-category"
+            class="mb-2 block text-[14px] font-semibold"
+          >
+            Loại
+          </label>
+
+          <select id="record-category" class="field-input">
+            <option value="all">Tất cả</option>
+            <option value="Xoài">Xoài</option>
+            <option value="Cam">Cam</option>
+            <option value="Bưởi">Bưởi</option>
+            <option value="Thanh long">Thanh long</option>
+            <option value="Dừa">Dừa</option>
+          </select>
+        </div>
+
+        <!-- Trạng thái -->
+        <div>
+          <label
+            for="record-status"
+            class="mb-2 block text-[14px] font-semibold"
+          >
+            Trạng thái
+          </label>
+
+          <select id="record-status" class="field-input">
+            <option value="all">Tất cả</option>
+            <option value="da-chot">Đã chốt</option>
+            <option value="dang-xu-ly">Đang xử lý</option>
+            <option value="huy">Đã hủy</option>
+          </select>
+        </div>
+
+        <!-- Sắp xếp -->
+        <div>
+          <label for="record-sort" class="mb-2 block text-[14px] font-semibold">
+            Sắp xếp
+          </label>
+
+          <select id="record-sort" class="field-input">
+            <option value="date-desc">Ngày mới nhất</option>
+            <option value="date-asc">Ngày cũ nhất</option>
+            <option value="amount-desc">Số tiền cao nhất</option>
+            <option value="amount-asc">Số tiền thấp nhất</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- ==================================================
+           KHUNG DANH SÁCH
+      ================================================== -->
+      <section
+        class="overflow-hidden rounded-card border border-line bg-white dark:border-line-invert dark:bg-surface-dark-alt"
+        aria-labelledby="records-title"
+      >
+        <!-- Header bảng -->
+        <div
+          class="flex flex-wrap items-center justify-between gap-4 border-b border-line px-5 py-4 dark:border-line-invert"
+        >
+          <h2 id="records-title" class="font-display text-[22px] font-bold">
+            Dữ liệu giao dịch
+          </h2>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <span
+              id="record-count"
+              class="text-[14px] text-muted dark:text-muted-invert"
+            >
+              0 bản ghi
+            </span>
+
+            <button
+              id="add-record"
+              type="button"
+              class="btn-primary rounded-card px-4 py-2 text-[14px]"
+            >
+              Thêm bản ghi
+            </button>
+
+            <button
+              id="reset-records"
+              type="button"
+              class="btn-outline rounded-card px-4 py-2 text-[14px]"
+            >
+              Khôi phục dữ liệu mẫu
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================================================
+             LOADING
+        ================================================== -->
+        <div id="records-loading" class="space-y-3 p-5" aria-live="polite">
+          <div class="h-12 animate-pulse rounded bg-brand-50"></div>
+          <div class="h-12 animate-pulse rounded bg-brand-50"></div>
+          <div class="h-12 animate-pulse rounded bg-brand-50"></div>
+
+          <p class="text-center text-muted dark:text-muted-invert">
+            Đang tải dữ liệu...
+          </p>
+        </div>
+
+        <!-- ==================================================
+             ERROR
+        ================================================== -->
+        <div id="records-error" class="hidden p-6 text-center" role="alert">
+          <p id="records-error-message" class="font-medium text-red-600"></p>
+        </div>
+
+        <!-- ==================================================
+             EMPTY
+        ================================================== -->
+        <div id="records-empty" class="hidden p-10 text-center">
+          <p class="font-semibold">Không có dữ liệu để hiển thị.</p>
+
+          <p class="mt-2 text-[14px] text-muted dark:text-muted-invert">
+            Hãy thử thay đổi từ khóa hoặc bộ lọc.
+          </p>
+        </div>
+
+        <!-- ==================================================
+             DATA TABLE
+        ================================================== -->
+        <div id="records-content" class="hidden overflow-x-auto">
+          <table class="w-full min-w-[1050px] border-collapse">
+            <thead class="bg-brand-50 dark:bg-surface-dark">
+              <tr class="text-left">
+                <th class="px-4 py-3 text-[14px] font-semibold">Mã</th>
+
+                <th class="px-4 py-3 text-[14px] font-semibold">
+                  Người giao dịch
+                </th>
+
+                <th class="px-4 py-3 text-[14px] font-semibold">Loại</th>
+
+                <th class="px-4 py-3 text-[14px] font-semibold">Trạng thái</th>
+
+                <th class="px-4 py-3 text-[14px] font-semibold">Khối lượng</th>
+
+                <th class="px-4 py-3 text-[14px] font-semibold">Số tiền</th>
+
+                <th class="px-4 py-3 text-[14px] font-semibold">Ngày</th>
+
+                <th class="px-4 py-3 text-[14px] font-semibold">Thao tác</th>
+              </tr>
+            </thead>
+
+            <tbody
+              id="records-body"
+              class="divide-y divide-line dark:divide-line-invert"
+            ></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================================================
+         TEMPLATE TẠO TỪNG DÒNG
+    ================================================== -->
+    <template id="row-template">
+      <tr>
+        <td
+          data-cell="id"
+          class="whitespace-nowrap px-4 py-4 text-[14px] font-medium"
+        ></td>
+
+        <td data-cell="trader" class="px-4 py-4 text-[14px]"></td>
+
+        <td data-cell="category" class="px-4 py-4 text-[14px]"></td>
+
+        <td data-cell="status" class="px-4 py-4 text-[14px]"></td>
+
+        <td data-cell="weight" class="px-4 py-4 text-[14px]"></td>
+
+        <td data-cell="amount" class="px-4 py-4 text-[14px]"></td>
+
+        <td
+          data-cell="date"
+          class="whitespace-nowrap px-4 py-4 text-[14px]"
+        ></td>
+
+        <td class="px-4 py-4">
+          <button
+            type="button"
+            data-delete
+            class="font-semibold text-red-600 hover:underline"
+          >
+            Xóa
+          </button>
+        </td>
+      </tr>
+    </template>
+    <!-- ==================================================
+     DIALOG THÊM BẢN GHI
+================================================== -->
+    <dialog
+      id="record-dialog"
+      class="w-[calc(100%-40px)] max-w-[620px] rounded-card border border-line bg-white p-0 text-ink shadow-xl backdrop:bg-black/40 dark:border-line-invert dark:bg-surface-dark-alt dark:text-ink-invert"
+    >
+      <form id="record-form" method="dialog" class="p-6">
+        <div class="flex items-center justify-between gap-4">
+          <h2 class="font-display text-[24px] font-bold">Thêm bản ghi</h2>
+
+          <button
+            id="close-record-dialog"
+            type="button"
+            class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-brand-50 dark:hover:bg-surface-dark"
+            aria-label="Đóng cửa sổ thêm bản ghi"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          <!-- Mã -->
+          <div>
+            <label for="record-id" class="field-label"> Mã giao dịch </label>
+
+            <input
+              id="record-id"
+              name="id"
+              type="text"
+              class="field-input"
+              placeholder="PC-2608-001"
+              required
+            />
+          </div>
+
+          <!-- Người giao dịch -->
+          <div>
+            <label for="record-trader" class="field-label">
+              Người giao dịch
+            </label>
+
+            <input
+              id="record-trader"
+              name="trader"
+              type="text"
+              class="field-input"
+              placeholder="Nguyễn Văn A"
+              required
+            />
+          </div>
+
+          <!-- Loại -->
+          <div>
+            <label for="record-form-category" class="field-label"> Loại </label>
+
+            <select
+              id="record-form-category"
+              name="category"
+              class="field-input"
+              required
+            >
+              <option value="">Chọn loại</option>
+              <option value="Xoài">Xoài</option>
+              <option value="Cam">Cam</option>
+              <option value="Bưởi">Bưởi</option>
+              <option value="Thanh long">Thanh long</option>
+              <option value="Dừa">Dừa</option>
+            </select>
+          </div>
+
+          <!-- Trạng thái -->
+          <div>
+            <label for="record-form-status" class="field-label">
+              Trạng thái
+            </label>
+
+            <select
+              id="record-form-status"
+              name="status"
+              class="field-input"
+              required
+            >
+              <option value="">Chọn trạng thái</option>
+              <option value="da-chot">Đã chốt</option>
+              <option value="dang-xu-ly">Đang xử lý</option>
+              <option value="huy">Đã hủy</option>
+            </select>
+          </div>
+
+          <!-- Khối lượng -->
+          <div>
+            <label for="record-weight" class="field-label">
+              Khối lượng (kg)
+            </label>
+
+            <input
+              id="record-weight"
+              name="weight"
+              type="number"
+              min="1"
+              class="field-input"
+              required
+            />
+          </div>
+
+          <!-- Số tiền -->
+          <div>
+            <label for="record-amount" class="field-label"> Số tiền </label>
+
+            <input
+              id="record-amount"
+              name="amount"
+              type="number"
+              min="1"
+              class="field-input"
+              required
+            />
+          </div>
+
+          <!-- Ngày -->
+          <div class="sm:col-span-2">
+            <label for="record-date" class="field-label">
+              Ngày giao dịch
+            </label>
+
+            <input
+              id="record-date"
+              name="date"
+              type="date"
+              class="field-input"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-3">
+          <button
+            id="cancel-record"
+            type="button"
+            class="btn-outline rounded-card px-4 py-3 text-[14px]"
+          >
+            Hủy
+          </button>
+
+          <button
+            type="submit"
+            class="btn-primary rounded-card px-4 py-3 text-[14px]"
+          >
+            Lưu bản ghi
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="./js/records.js"></script>
+    <script type="module" src="./js/records.js"></script>
+  </body>
+</html>

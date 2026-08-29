@@ -1,0 +1,272 @@
+[
+  {
+    "id": "PC-2607-118",
+    "trader": "Chú Bảy Rạch Giá",
+    "category": "Xoài",
+    "status": "da-chot",
+    "weight": 1178,
+    "amount": 37696000,
+    "date": "2026-07-26"
+  },
+  {
+    "id": "PC-2607-119",
+    "trader": "Cô Lan Cần Thơ",
+    "category": "Cam",
+    "status": "dang-xu-ly",
+    "weight": 860,
+    "amount": 25800000,
+    "date": "2026-07-25"
+  },
+  {
+    "id": "PC-2607-120",
+    "trader": "Anh Minh Tiền Giang",
+    "category": "Bưởi",
+    "status": "da-chot",
+    "weight": 950,
+    "amount": 33250000,
+    "date": "2026-07-24"
+  },
+  {
+    "id": "PC-2607-121",
+    "trader": "Chị Hạnh Vĩnh Long",
+    "category": "Xoài",
+    "status": "huy",
+    "weight": 720,
+    "amount": 21600000,
+    "date": "2026-07-23"
+  },
+  {
+    "id": "PC-2607-122",
+    "trader": "Chú Tám Đồng Tháp",
+    "category": "Thanh long",
+    "status": "da-chot",
+    "weight": 1250,
+    "amount": 28750000,
+    "date": "2026-07-22"
+  },
+  {
+    "id": "PC-2607-123",
+    "trader": "Cô Mai Bến Tre",
+    "category": "Dừa",
+    "status": "dang-xu-ly",
+    "weight": 1500,
+    "amount": 19500000,
+    "date": "2026-07-21"
+  },
+  {
+    "id": "PC-2607-124",
+    "trader": "Anh Phúc Long An",
+    "category": "Cam",
+    "status": "da-chot",
+    "weight": 980,
+    "amount": 29400000,
+    "date": "2026-07-20"
+  },
+  {
+    "id": "PC-2607-125",
+    "trader": "Chị Thảo Sóc Trăng",
+    "category": "Xoài",
+    "status": "dang-xu-ly",
+    "weight": 1100,
+    "amount": 35200000,
+    "date": "2026-07-19"
+  },
+  {
+    "id": "PC-2607-126",
+    "trader": "Chú Năm An Giang",
+    "category": "Bưởi",
+    "status": "huy",
+    "weight": 800,
+    "amount": 26400000,
+    "date": "2026-07-18"
+  },
+  {
+    "id": "PC-2607-127",
+    "trader": "Cô Thu Hậu Giang",
+    "category": "Thanh long",
+    "status": "da-chot",
+    "weight": 1340,
+    "amount": 30820000,
+    "date": "2026-07-17"
+  },
+  {
+    "id": "PC-2607-128",
+    "trader": "Anh Khoa Kiên Giang",
+    "category": "Dừa",
+    "status": "da-chot",
+    "weight": 1600,
+    "amount": 20800000,
+    "date": "2026-07-16"
+  },
+  {
+    "id": "PC-2607-129",
+    "trader": "Chị Ngọc Cà Mau",
+    "category": "Cam",
+    "status": "dang-xu-ly",
+    "weight": 900,
+    "amount": 27000000,
+    "date": "2026-07-15"
+  },
+  {
+    "id": "PC-2607-130",
+    "trader": "Chú Ba Trà Vinh",
+    "category": "Xoài",
+    "status": "da-chot",
+    "weight": 1020,
+    "amount": 32640000,
+    "date": "2026-07-14"
+  },
+  {
+    "id": "PC-2607-131",
+    "trader": "Cô Hà Bạc Liêu",
+    "category": "Bưởi",
+    "status": "dang-xu-ly",
+    "weight": 870,
+    "amount": 28710000,
+    "date": "2026-07-13"
+  },
+  {
+    "id": "PC-2607-132",
+    "trader": "Anh Dũng Đồng Nai",
+    "category": "Thanh long",
+    "status": "da-chot",
+    "weight": 1450,
+    "amount": 33350000,
+    "date": "2026-07-12"
+  },
+  {
+    "id": "PC-2607-133",
+    "trader": "Chị Vy Bình Dương",
+    "category": "Dừa",
+    "status": "huy",
+    "weight": 1300,
+    "amount": 16900000,
+    "date": "2026-07-11"
+  },
+  {
+    "id": "PC-2607-134",
+    "trader": "Chú Sáu Tây Ninh",
+    "category": "Cam",
+    "status": "da-chot",
+    "weight": 930,
+    "amount": 27900000,
+    "date": "2026-07-10"
+  },
+  {
+    "id": "PC-2607-135",
+    "trader": "Cô Phương Vĩnh Long",
+    "category": "Xoài",
+    "status": "dang-xu-ly",
+    "weight": 1080,
+    "amount": 34560000,
+    "date": "2026-07-09"
+  },
+  {
+    "id": "PC-2607-136",
+    "trader": "Anh Nam Cần Thơ",
+    "category": "Bưởi",
+    "status": "da-chot",
+    "weight": 990,
+    "amount": 32670000,
+    "date": "2026-07-08"
+  },
+  {
+    "id": "PC-2607-137",
+    "trader": "Chị Liên Đồng Tháp",
+    "category": "Thanh long",
+    "status": "dang-xu-ly",
+    "weight": 1180,
+    "amount": 27140000,
+    "date": "2026-07-07"
+  },
+  {
+    "id": "PC-2607-138",
+    "trader": "Chú Tư Bến Tre",
+    "category": "Dừa",
+    "status": "da-chot",
+    "weight": 1700,
+    "amount": 22100000,
+    "date": "2026-07-06"
+  },
+  {
+    "id": "PC-2607-139",
+    "trader": "Cô Hương Long An",
+    "category": "Cam",
+    "status": "huy",
+    "weight": 760,
+    "amount": 22800000,
+    "date": "2026-07-05"
+  },
+  {
+    "id": "PC-2607-140",
+    "trader": "Anh Sơn Tiền Giang",
+    "category": "Xoài",
+    "status": "da-chot",
+    "weight": 1210,
+    "amount": 38720000,
+    "date": "2026-07-04"
+  },
+  {
+    "id": "PC-2607-141",
+    "trader": "Chị Hoa Hậu Giang",
+    "category": "Bưởi",
+    "status": "dang-xu-ly",
+    "weight": 840,
+    "amount": 27720000,
+    "date": "2026-07-03"
+  },
+  {
+    "id": "PC-2607-142",
+    "trader": "Chú Mười Kiên Giang",
+    "category": "Thanh long",
+    "status": "da-chot",
+    "weight": 1380,
+    "amount": 31740000,
+    "date": "2026-07-02"
+  },
+  {
+    "id": "PC-2607-143",
+    "trader": "Cô Tuyết Cà Mau",
+    "category": "Dừa",
+    "status": "dang-xu-ly",
+    "weight": 1550,
+    "amount": 20150000,
+    "date": "2026-07-01"
+  },
+  {
+    "id": "PC-2606-144",
+    "trader": "Anh Hải Trà Vinh",
+    "category": "Cam",
+    "status": "da-chot",
+    "weight": 970,
+    "amount": 29100000,
+    "date": "2026-06-30"
+  },
+  {
+    "id": "PC-2606-145",
+    "trader": "Chị Trang Bạc Liêu",
+    "category": "Xoài",
+    "status": "huy",
+    "weight": 690,
+    "amount": 22080000,
+    "date": "2026-06-29"
+  },
+  {
+    "id": "PC-2606-146",
+    "trader": "Chú Thành Sóc Trăng",
+    "category": "Bưởi",
+    "status": "da-chot",
+    "weight": 1050,
+    "amount": 34650000,
+    "date": "2026-06-28"
+  },
+  {
+    "id": "PC-2606-147",
+    "trader": "Cô Yến An Giang",
+    "category": "Thanh long",
+    "status": "dang-xu-ly",
+    "weight": 1120,
+    "amount": 25760000,
+    "date": "2026-06-27"
+  }
+]
